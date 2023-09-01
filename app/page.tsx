@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { ModeToggle } from '@/components/ui/toggleTheme'
 import { TypographyDemo } from '@/components/test/typography'
 import { Test } from '@/components/test/Test'
+import Footer from '@/components/myUi/Footer'
 
 
 export default function Home() {
@@ -45,6 +46,7 @@ export default function Home() {
       </div>
 
      </section>
+     <Footer />
     </main>
   )
 }
