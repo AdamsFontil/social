@@ -1,4 +1,6 @@
 import React from 'react';
+import { Input } from "@/components/ui/input"
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 
 const posts = [
   {
@@ -30,18 +32,50 @@ const posts = [
 
 const Posts: React.FC = () => {
   return (
-    <div className='col-span-2'>
-      {posts.map((post) => (
-        <div key={post.id} className="post">
-          <p className="username">{post.username}</p>
-          <p className="content">{post.content}</p>
-          <p className="timestamp">{post.timestamp}</p>
-          <div className="actions">
-            <span className="likes">{post.likes} Likes</span>
-            <span className="retweets">{post.retweets} Retweets</span>
-          </div>
+    <div className='col-span-2 w-full'>
+      <div className='text-2xl flex flex-col border p-2 gap-4'>
+        <div>Home</div>
+        <div className='flex justify-around'>
+          <div>For you</div>
+          <div>Following</div>
         </div>
-      ))}
+      </div>
+
+      <div>
+        <div className='flex'>
+          <div>
+          <Avatar className='w-16 h-16'>
+          <AvatarImage src="https://github.com/shadcn.png" />
+          <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+          </div>
+
+          <div className='p-2 border-b-2 w-full'>
+          <Input type="text" className='border-0 hover:border-red-500' placeholder="What's happening?!" />
+
+          </div>
+
+
+
+        </div>
+
+
+      </div>
+
+
+      <div className=''>
+        {posts.map((post) => (
+          <div key={post.id} className="post">
+            <p className="username">{post.username}</p>
+            <p className="content">{post.content}</p>
+            <p className="timestamp">{post.timestamp}</p>
+            <div className="actions">
+              <span className="likes">{post.likes} Likes</span>
+              <span className="retweets">{post.retweets} Retweets</span>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
