@@ -32,12 +32,84 @@ const posts = [
     likes: 40,
     retweets: 8,
   },
-  // Add more posts here...
+  {
+    id: 4,
+    username: 'user123',
+    content: 'Just had an amazing time at the beach! ☀️🏖️ #BeachDay',
+    timestamp: '2 hours ago',
+    likes: 15,
+    retweets: 5,
+  },
+  {
+    id: 5,
+    username: 'techFanatic',
+    content: 'Excited about the latest tech conference. Can\'t wait to learn and connect! #TechConference',
+    timestamp: '4 hours ago',
+    likes: 25,
+    retweets: 10,
+  },
+  {
+    id: 6,
+    username: 'foodieEats',
+    content: 'Tried a new recipe today, and it turned out amazing! 🍔🍟 #CookingAdventures',
+    timestamp: '6 hours ago',
+    likes: 40,
+    retweets: 8,
+  },
+  {
+    id: 7,
+    username: 'user123',
+    content: 'Just had an amazing time at the beach! ☀️🏖️ #BeachDay',
+    timestamp: '2 hours ago',
+    likes: 15,
+    retweets: 5,
+  },
+  {
+    id: 8,
+    username: 'techFanatic',
+    content: 'Excited about the latest tech conference. Can\'t wait to learn and connect! #TechConference',
+    timestamp: '4 hours ago',
+    likes: 25,
+    retweets: 10,
+  },
+  {
+    id: 9,
+    username: 'foodieEats',
+    content: 'Tried a new recipe today, and it turned out amazing! 🍔🍟 #CookingAdventures',
+    timestamp: '6 hours ago',
+    likes: 40,
+    retweets: 8,
+  },
+  {
+    id: 10,
+    username: 'user123',
+    content: 'Just had an amazing time at the beach! ☀️🏖️ #BeachDay',
+    timestamp: '2 hours ago',
+    likes: 15,
+    retweets: 5,
+  },
+  {
+    id: 11,
+    username: 'techFanatic',
+    content: 'Excited about the latest tech conference. Can\'t wait to learn and connect! #TechConference',
+    timestamp: '4 hours ago',
+    likes: 25,
+    retweets: 10,
+  },
+  {
+    id: 12,
+    username: 'foodieEats',
+    content: 'Tried a new recipe today, and it turned out amazing! 🍔🍟 #CookingAdventures12293939494',
+    timestamp: '6 hours ago',
+    likes: 40,
+    retweets: 8,
+  },
+
 ];
 
 const Posts: React.FC = () => {
   return (
-    <div className='col-span-2 w-full'>
+    <div className='col-span-5 w-full'>
       <div className='text-2xl flex flex-col border p-2 gap-4'>
         <div>Home</div>
         <div className='flex justify-around'>
@@ -94,11 +166,14 @@ const Posts: React.FC = () => {
 
       <div className=''>
         {posts.map((post) => (
-          <div key={post.id} className="post flex gap-4  border-2 border-red-300">
-            <div className='avatar border rounded-full flex justify-center items-center'>
-              <p className="username">{post.username}</p>
+          <div key={post.id} className="post flex gap-4 p-2 border-x border-b">
+            <div className='avatar'>
+            <Avatar>
+              <AvatarImage src="https://github2.com/shadcn.png" alt="@shadcn" />
+              <AvatarFallback>{post.username}</AvatarFallback>
+            </Avatar>
             </div>
-            <div className='content'>
+            <div className='content  w-full'>
               <div className='flex justify-between'>
                 <div className='flex gap-2 '>
                   <p>Username</p>

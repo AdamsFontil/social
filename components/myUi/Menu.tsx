@@ -6,7 +6,7 @@ import { Avatar, AvatarImage, AvatarFallback } from '../ui/avatar';
 
 const Menu: React.FC = () => {
   return (
-    <div className='col-span-1 flex flex-col gap-4 justify-between items-start px-4 text-xl'>
+    <div className='col-span-2 flex flex-col gap-2 h-screen items-start text-xl sticky top-0'>
         <div>
           <Image
             src="/icons8-twitter.svg"
@@ -16,17 +16,17 @@ const Menu: React.FC = () => {
             objectFit='cover'
           />
         </div>
-        <div className='flex flex-col gap-5  w-3/4 '>
-          <div className='flex gap-2 items-center'><Home /> Home</div>
-          <div className='flex gap-2 items-center'><Search /> Explore</div>
-          <div className='flex gap-2 items-center'><Bell /> Notifications</div>
-          <div className='flex gap-2 items-center'><CheckCircle /> Verified</div>
-          <div className='flex gap-2 items-center'><MessageCircle /> Messages</div>
-          <div className='flex gap-2 items-center'><List /> Lists</div>
-          <div className='flex gap-2 items-center'><Users /> Communities</div>
-          <div className='flex gap-2 items-center'><User /> Profile</div>
-          <div className='flex gap-2 items-center'><MoreHorizontal className='border-2 rounded-full border-primary' /> More</div>
-          <Button className='p-6 rounded-full bg-sky-500 text-primary'>Post</Button>
+        <div className='flex flex-col flex-1  '>
+          <div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><Home /> Home</div>
+          <div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><Search /> Explore</div>
+          <div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><Bell /> Notifications</div>
+          <div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><CheckCircle /> Verified</div>
+          <div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><MessageCircle /> Messages</div>
+          <div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><List /> Lists</div>
+          <div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><Users /> Communities</div>
+          <div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><User /> Profile</div>
+          <div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><MoreHorizontal className='border-2 rounded-full border-primary' /> More</div>
+          <Button className='p-6 px-24 mt-2 rounded-full w-full max-w-xl flex text-2xl bg-sky-500 text-primary'>Post</Button>
         </div>
         <div className='py-5 justify-center items-center flex gap-2 '>
           <div>
