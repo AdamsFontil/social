@@ -76,9 +76,9 @@ const whoToFollow = [
 
 const Sidebar: React.FC = () => {
   return (
-    <div className='col-span-3 py-2 flex flex-col gap-2 pr-4 h-full stastic top-0 flex-grow '>
+    <div className='col-span-3  flex-grow '>
 
-<div className='max-h-screen fixed overflow-y-auto'>
+<div className='sticky top-0 py-2 flex flex-col gap-2 pr-4'>
 
   <Input type="text" placeholder="Search" className='rounded-full' />
 
@@ -88,7 +88,7 @@ const Sidebar: React.FC = () => {
       </CardHeader>
       <CardContent className='text-sm p-4 '>
         <p className='pb-2'>Subscribe to unlock new features and if eligible, receive a share of ads revenue.</p>
-        <Button className='rounded-full'>Subscribe </Button>
+        <Button className='rounded-full bg-sky-500 text-white '>Subscribe </Button>
       </CardContent>
 
     </Card>

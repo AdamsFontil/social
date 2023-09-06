@@ -1,0 +1,10 @@
+.custom-hover-style:hover > div:first-child {
+  background-color: rgba(0, 191, 255, 0.1);
+  border-radius: 50%;
+}
+
+.test {
+  * {
+    background-color: blue;
+  }
+}

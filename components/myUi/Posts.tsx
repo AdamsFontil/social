@@ -1,10 +1,13 @@
+
 import React from 'react';
 import { Input } from "@/components/ui/input"
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 import EveryoneDropdown from './EveryoneDropdown';
 import DropdownCheck from './DropdownCheck'
 import { Button } from '../ui/button';
-import { Image, Vote, Smile, CalendarCheck, Film, MapPin } from '../../node_modules/lucide-react'
+import { Image, Vote, Smile, CalendarCheck, Film, MapPin, MessageCircle, Repeat2, Heart, BarChart2, Upload, Dot, MoreHorizontal } from '../../node_modules/lucide-react'
+import Link from 'next/link';
+
 
 
 const posts = [
@@ -107,27 +110,32 @@ const posts = [
 
 ];
 
+
+
 const Posts: React.FC = () => {
   return (
-    <div className='col-span-5 w-full'>
-      <div className='text-2xl flex flex-col border p-2 gap-4'>
-        <div>Home</div>
-        <div className='flex justify-around'>
-          <div>For you</div>
-          <div>Following</div>
+    <div className='col-span-5 bg-my-blue w-full'>
+      <div className='text-2xl flex flex-col border-x border-b'>
+      <Link href="/home">
+  <div className="px-4 py-2">Home</div>
+</Link>
+
+        <div className='flex flex-grow justify-center text-center items-center'>
+          <div className='hover:bg-secondary flex-1 p-2'>For you</div>
+          <div className='hover:bg-secondary flex-1 p-2'>Following</div>
         </div>
       </div>
 
 
       <div className='flex border-x border-b'>
-          <div className='p-5'>
+          <div className='px-4 py-2'>
           <Avatar className='w-12 h-12'>
           <AvatarImage src="https://github.com/shadcn.png" />
           <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           </div>
 
-          <div className=' p-4 flex flex-col gap-2 pb-2 flex-1 '>
+          <div className=' pr-4 py-2 flex flex-col gap-2 pb-2 flex-1 '>
             <EveryoneDropdown
               ButtonTitle="Everyone"
               DropdownTitle="Choose audience"
@@ -156,7 +164,7 @@ const Posts: React.FC = () => {
 
             </div>
             <div>
-              <Button className='bg-sky-500 text-white rounded-full'>Post</Button>
+              <Button className='bg-sky-500 px-6 text-white rounded-full'>Post</Button>
             </div>
           </div>
 
@@ -164,36 +172,41 @@ const Posts: React.FC = () => {
       </div>
 
 
-      <div className=''>
+      <div className='customer-hover-style'>
         {posts.map((post) => (
           <div key={post.id} className="post flex gap-4 p-2 border-x border-b">
             <div className='avatar'>
-            <Avatar>
+            <Avatar className='w-12 h-12'>
               <AvatarImage src="https://github2.com/shadcn.png" alt="@shadcn" />
               <AvatarFallback>{post.username}</AvatarFallback>
             </Avatar>
             </div>
             <div className='content  w-full'>
-              <div className='flex justify-between'>
-                <div className='flex gap-2 '>
-                  <p>Username</p>
-                  <p>Handler</p>
-                  <p>Timestamp</p>
+              <div className='flex gap-2 justify-between items-center text-md'>
+                <div className='flex gap-1 '>
+                  <p>{post.username}</p>
+                  <p className='text-gray-500'>@{post.username}</p>
+                  <Dot />
+                  <p>{post.timestamp}</p>
                 </div>
-                <div className=''>
-                  <p>More ...</p>
+                <div className='hover:bg-sky-500 hover:bg-opacity-20 rounded-full p-2'>
+                  <MoreHorizontal />
                 </div>
               </div>
 
               <div className='py-5'>
                 <p className="content">{post.content}</p>
               </div>
-              <div className="actions flex justify-between">
-                <span className="likes">{post.likes} Replies</span>
-                <span className="retweets">{post.retweets} Reposts</span>
-                <span className="retweets">{post.retweets} Likes</span>
-                <span className="retweets">{post.retweets} Views</span>
-                <span className="retweets">{post.retweets} Share</span>
+              <div className="actions flex justify-between text-sm items-center text-gray-400">
+                <span className="flex items-center hover:text-sky-500"><div className='hover:bg-sky-500 rounded-full hover:bg-opacity-20 p-2'><MessageCircle className='' /> </div> {post.likes}</span>
+                <span className="flex items-center hover:text-green-500"><div className='hover:bg-green-500 rounded-full hover:bg-opacity-20 p-2'><Repeat2 className='' /> </div>{post.likes}</span>
+                <span className="flex items-center hover:text-pink-500"><div className='hover:bg-pink-500 rounded-full hover:bg-opacity-20 p-2'><Heart className='' /> </div>{post.likes}</span>
+                <div className="flex items-center hover:text-sky-500">
+                  <div className='hover:bg-sky-500 hover:bg-opacity-20 rounded-full  p-2'><BarChart2/></div>
+                  <p className=''>{post.retweets}</p>
+                  </div>
+                <span className="hover:text-sky-500 hover:bg-sky-500 rounded-full hover:bg-opacity-10 p-2"><Upload /></span>
+
               </div>
             </div>
 
