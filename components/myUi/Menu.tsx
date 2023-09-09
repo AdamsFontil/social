@@ -22,13 +22,13 @@ const Menu: React.FC = () => {
         </div>
         <div className='flex flex-col flex-1  '>
           <Link href='/home'><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><Home /> Home</div></Link>
-          <Link href={'/explore'}></Link><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><Search /> Explore</div>
-          <Link href={'/notifications'}></Link><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><Bell /> Notifications</div>
-          <Link href={'/messages'}></Link><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><CheckCircle /> Verified</div>
-          <Link href={'/handler/lists'}></Link><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><MessageCircle /> Messages</div>
-          <Link href={'/handler/communities'}></Link><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><List /> Lists</div>
-          <Link href={'/verified-choose'}></Link><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><Users /> Communities</div>
-          <Link href={'/handler'}></Link><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><User /> Profile</div>
+          <Link href={'/explore'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><Search /> Explore</div></Link>
+          <Link href={'/notifications'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><Bell /> Notifications</div></Link>
+          <Link href={'/messages'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><MessageCircle /> Messages</div></Link>
+          <Link href={'/handler/communities'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><List /> Lists</div></Link>
+          <Link href={'/verified-choose'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><Users /> Communities</div></Link>
+          <Link href={'/handler/lists'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><CheckCircle /> Verified</div></Link>
+          <Link href={'/handler'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><User /> Profile</div></Link>
           <div className=''> < ModeToggle /></div>
           <MyPopover />
           <Button className='p-6 px-24 mt-2 rounded-full w-full max-w-xl flex text-2xl bg-sky-500 text-primary'>Post</Button>
