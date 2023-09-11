@@ -25,9 +25,9 @@ const Menu: React.FC = () => {
           <Link href={'/explore'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><Search /> Explore</div></Link>
           <Link href={'/notifications'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><Bell /> Notifications</div></Link>
           <Link href={'/messages'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><MessageCircle /> Messages</div></Link>
-          <Link href={'/handler/communities'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><List /> Lists</div></Link>
-          <Link href={'/verified-choose'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><Users /> Communities</div></Link>
-          <Link href={'/handler/lists'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><CheckCircle /> Verified</div></Link>
+          <Link href={'/handler/lists'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><List /> Lists</div></Link>
+          <Link href={'/handler/communities'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><Users /> Communities</div></Link>
+          <Link href={'/verified-choose'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><CheckCircle /> Verified</div></Link>
           <Link href={'/handler'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><User /> Profile</div></Link>
           <div className=''> < ModeToggle /></div>
           <MyPopover />

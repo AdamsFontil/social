@@ -20,7 +20,7 @@ import {
 
 export function TabsforUser() {
   return (
-    <Tabs defaultValue="account" className="w-full">
+    <Tabs defaultValue="posts" className="w-full">
       <TabsList className="flex p-0 m-0 justify-center items-center flex-1 w-full">
         <TabsTrigger className=" flex flex-1 p-4" value="posts">Posts</TabsTrigger>
         <TabsTrigger className=" flex flex-1 p-4" value="replies">Replies</TabsTrigger>
@@ -28,26 +28,26 @@ export function TabsforUser() {
         <TabsTrigger className=" flex flex-1 p-4" value="media">Media</TabsTrigger>
         <TabsTrigger className="flex flex-1 p-4" value="likes">Likes</TabsTrigger>
       </TabsList>
-      <TabsContent value="for-you">
+      <TabsContent value="posts">
         <TrendingContent />
         <Posts />
       </TabsContent>
-      <TabsContent value="trending">
+      <TabsContent value="replies">
         <h1 className="px-2 text-2xl">United States trends</h1>
         <TrendingContent />
       </TabsContent>
-      <TabsContent value="news">
+      <TabsContent value="highlights">
         <h1 className="px-2 text-2xl">Trending in News</h1>
         <div>Neeeds Card </div>
         <TrendingContent />
       </TabsContent>
-      <TabsContent value="sports">
+      <TabsContent value="media">
         <h1 className="px-2 text-2xl">Trending in Sports</h1>
         <div>Neeeds Card </div>
         <div>Also score of latest game Also trending tabs need to be specfic so like sports must be sports related </div>
         <TrendingContent />
       </TabsContent>
-      <TabsContent value="entertainment">
+      <TabsContent value="likes">
         <h1 className="px-2 text-2xl">Trending in Entertainment</h1>
         <TrendingContent />
       </TabsContent>

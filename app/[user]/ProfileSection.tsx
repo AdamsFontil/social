@@ -16,7 +16,7 @@ const ProfileSection = () => {
       <section className="bg-secondary p-24">
       </section>
       <section className="avatar flex justify-between items-center -mt-16 px-4">
-          <Avatar className='w-36 h-36 rounded-full'>
+          <Avatar className='w-36 h-36 border-4 border-black rounded-full'>
             <AvatarImage src="https://github.com/shadcn.png" />
             <AvatarFallback>CN</AvatarFallback>
         </Avatar>
