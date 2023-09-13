@@ -21,7 +21,7 @@ import Notifications from "./Notifications"
 
 export function TabsForNotifications() {
   return (
-    <Tabs defaultValue="account" className="w-full">
+    <Tabs defaultValue="all" className="w-full">
       <TabsList className="flex p-0 m-0 justify-center items-center flex-1 w-full border-b">
         <TabsTrigger className=" flex flex-1 p-4 justify-center" value="all">All</TabsTrigger>
         <TabsTrigger className=" flex flex-1 p-4 justify-center" value="verified">Verified</TabsTrigger>

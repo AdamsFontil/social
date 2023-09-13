@@ -6,6 +6,7 @@ import { Avatar, AvatarImage, AvatarFallback } from '../ui/avatar';
 import { ModeToggle } from '../ui/toggleTheme';
 import Link from 'next/link';
 import  MyPopover  from './MyPopover'
+import Verified_Choose from '@/app/i/verified-choose/page';
 
 
 const Menu: React.FC = () => {
@@ -27,10 +28,11 @@ const Menu: React.FC = () => {
           <Link href={'/messages'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><MessageCircle /> Messages</div></Link>
           <Link href={'/handler/lists'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><List /> Lists</div></Link>
           <Link href={'/handler/communities'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><Users /> Communities</div></Link>
-          <Link href={'/verified-choose'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><CheckCircle /> Verified</div></Link>
+          <Link href={'/i/verified-choose'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><CheckCircle /> Verified</div></Link>
           <Link href={'/handler'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><User /> Profile</div></Link>
           <div className=''> < ModeToggle /></div>
           <MyPopover />
+          <Verified_Choose />
           <Button className='p-6 px-24 mt-2 rounded-full w-full max-w-xl flex text-2xl bg-sky-500 text-primary'>Post</Button>
         </div>
         <div className='py-5 justify-center items-center flex gap-2 '>

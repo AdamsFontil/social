@@ -20,7 +20,7 @@ import {
 
 export function TabsforExplore() {
   return (
-    <Tabs defaultValue="account" className="w-full">
+    <Tabs defaultValue="for-you" className="w-full">
       <TabsList className="flex p-0 m-0 justify-center items-center flex-1 w-full">
         <TabsTrigger className=" flex flex-1 p-4" value="for-you">For You</TabsTrigger>
         <TabsTrigger className=" flex flex-1 p-4" value="trending">Trending</TabsTrigger>

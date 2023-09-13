@@ -17,7 +17,7 @@ const Bookmarks: React.FC = () => {
           <h3 className=' text-3xl'>Bookmarks</h3>
           <p className='text-lg text-gray-500'>@Ada1</p>
         </header>
-        <section className='p-16 bg-red-500'>
+        <section className='p-16'>
           <h3 className=' text-3xl'>Save posts for later</h3>
           <p className='text-lg text-gray-500'>Bookmark posts to easily find them again in the future.</p>
         </section>
