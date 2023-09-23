@@ -12,7 +12,7 @@ const AccountSettings = () =>{
   return (
     <Tabs defaultValue="all" className="w-full flex flex-col gap-4">
       <TabsList className="flex flex-col ">
-      <div className='flex flex-col flex-1 w-full px-2 py-4 gap-4'>
+      <div className='flex flex-col flex-1 w-full px-4 py-2 gap-4'>
           <h3 className=' text-3xl'>Your Account</h3>
             <p>
             See information about your account, download an archive of your data, or learn about your account deactivation options

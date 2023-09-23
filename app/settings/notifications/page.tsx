@@ -13,7 +13,7 @@ const Notifications_Settings = () =>{
   return (
     <Tabs defaultValue="all" className="w-full flex flex-col ">
       <TabsList className="flex flex-col ">
-      <div className='flex flex-col flex-1 w-full px-2 py-4 gap-4'>
+      <div className='flex flex-col flex-1 w-full px-4 py-2 gap-4'>
           <h3 className=' text-3xl'>Notifications</h3>
             <p>
             Select the kinds of notifications you get about your activities, interests, and recommendations.
@@ -24,7 +24,7 @@ const Notifications_Settings = () =>{
             <div className="px-4"><SlidersHorizontal /></div>
             <div className="flex flex-col text-sm flex-1 jus items-start">
               <h4>Filters </h4>
-              <p className=" ">Choose the notifications you'd like to see - and the ones you don't</p>
+              <p className="whitespace-pre-line text-left">Choose the notifications you'd like to see - and the ones you don't</p>
             </div>
             <div><ChevronRight /></div>
           </TabsTrigger>

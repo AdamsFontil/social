@@ -13,7 +13,7 @@ const Accessibility_Settings = () =>{
   return (
     <Tabs defaultValue="all" className="w-full flex flex-col ">
       <TabsList className="flex flex-col ">
-      <div className='flex flex-col flex-1 w-full px-2 py-4 gap-4'>
+      <div className='flex flex-col flex-1 w-full px-4 py-2 gap-4'>
           <h3 className=' text-3xl'>Accessibility, display and languages</h3>
             <p>
             Manage how Tweeter content is displayed to you.
@@ -24,7 +24,7 @@ const Accessibility_Settings = () =>{
             <div className="px-4"><SlidersHorizontal /></div>
             <div className="flex flex-col text-sm flex-1 jus items-start">
               <h4>Accessibility </h4>
-              <p className=" ">Manage aspects of your Tweeter experience such as color contrast and motion.</p>
+              <p className="whitespace-pre-line text-left">Manage aspects of your Tweeter experience such as color contrast and motion.</p>
             </div>
             <div><ChevronRight /></div>
           </TabsTrigger>
@@ -40,7 +40,7 @@ const Accessibility_Settings = () =>{
             <div className="px-4"><Vibrate /></div>
             <div className="flex flex-col text-sm flex-1 justify-start items-start">
               <h4>Languages </h4>
-              <p>Manages which languages are used to personalize your Tweeter experience.</p>
+              <p className="whitespace-pre-line text-left">Manages which languages are used to personalize your Tweeter experience.</p>
             </div>
             <div><ChevronRight /></div>
           </TabsTrigger>

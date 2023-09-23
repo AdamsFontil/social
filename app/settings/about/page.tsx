@@ -13,16 +13,16 @@ const Additional_Ressources = () =>{
   return (
     <Tabs defaultValue="all" className="w-full flex flex-col ">
       <TabsList className="flex flex-col ">
-      <div className='flex flex-col flex-1 w-full px-2 py-4 gap-4'>
+      <div className='flex flex-col flex-1 w-full px-4 py-2 gap-4'>
           <h3 className=' text-3xl'>Additional Ressources</h3>
             <p>
             Check out other places for helpful information to learn more about X products and services.
             </p>
         </div>
         <div className="tabs text-sm  flex flex-col w-full py-4 border-b  overflow-y-auto">
-          <h3>Release notes</h3>
+          <h3 className="p-4">Release notes</h3>
           <TabsTrigger className="flex flex-1 gap-4 p-4 " value="account">
-            <div className="px-4"><User /></div>
+
             <div className="flex flex-col text-sm flex-1 jus items-start">
               <h4>Release notes </h4>
             </div>
@@ -30,31 +30,31 @@ const Additional_Ressources = () =>{
           </TabsTrigger>
         </div>
 
-        <div className="tabs text-sm  flex flex-col w-full py-4 border-b  overflow-y-auto">
-          <h3>Legal</h3>
+        <div className="tabs text-sm  flex flex-col w-full py-4 border-b overflow-y-auto">
+          <h3 className="p-4">Legal</h3>
           <TabsTrigger className="flex flex-1 gap-4 p-4 " value="account">
-            <div className="px-4"><User /></div>
+
             <div className="flex flex-col text-sm flex-1 jus items-start">
-              <h4>Ads info </h4>
+              <h4 className="whitespace-pre-line text-left">Ads info </h4>
             </div>
             <div><ArrowUpRight /></div>
           </TabsTrigger>
           <TabsTrigger className="flex flex-1 gap-4 p-4 " value="account">
-            <div className="px-4"><User /></div>
+
             <div className="flex flex-col text-sm flex-1 jus items-start">
               <h4>Cookie Policy </h4>
             </div>
             <div><ArrowUpRight /></div>
           </TabsTrigger>
           <TabsTrigger className="flex flex-1 gap-4 p-4 " value="account">
-            <div className="px-4"><User /></div>
+
             <div className="flex flex-col text-sm flex-1 jus items-start">
               <h4>Privacy Policy </h4>
             </div>
             <div><ArrowUpRight /></div>
           </TabsTrigger>
           <TabsTrigger className="flex flex-1 gap-4 p-4 " value="account">
-            <div className="px-4"><User /></div>
+
             <div className="flex flex-col text-sm flex-1 jus items-start">
               <h4>Terms of Service </h4>
             </div>
@@ -63,86 +63,86 @@ const Additional_Ressources = () =>{
         </div>
 
         <div className="tabs text-sm  flex flex-col w-full py-4 border-b  overflow-y-auto">
-          <h3>Miscalleneous</h3>
+          <h3 className="p-4">Miscalleneous</h3>
           <TabsTrigger className="flex flex-1 gap-4 p-4 " value="account">
-            <div className="px-4"><User /></div>
+
             <div className="flex flex-col text-sm flex-1 jus items-start">
               <h4>About </h4>
             </div>
             <div><ArrowUpRight /></div>
           </TabsTrigger>
           <TabsTrigger className="flex flex-1 gap-4 p-4 " value="account">
-            <div className="px-4"><User /></div>
+
             <div className="flex flex-col text-sm flex-1 jus items-start">
               <h4>Accessibility</h4>
             </div>
             <div><ArrowUpRight /></div>
           </TabsTrigger>
           <TabsTrigger className="flex flex-1 gap-4 p-4 " value="account">
-            <div className="px-4"><User /></div>
+
             <div className="flex flex-col text-sm flex-1 jus items-start">
               <h4>Advertising </h4>
             </div>
             <div><ArrowUpRight /></div>
           </TabsTrigger>
           <TabsTrigger className="flex flex-1 gap-4 p-4 " value="account">
-            <div className="px-4"><User /></div>
+
             <div className="flex flex-col text-sm flex-1 jus items-start">
               <h4>Blog </h4>
             </div>
             <div><ArrowUpRight /></div>
           </TabsTrigger>
           <TabsTrigger className="flex flex-1 gap-4 p-4 " value="account">
-            <div className="px-4"><User /></div>
+
             <div className="flex flex-col text-sm flex-1 jus items-start">
               <h4>Brand Ressources </h4>
             </div>
             <div><ArrowUpRight /></div>
           </TabsTrigger>
           <TabsTrigger className="flex flex-1 gap-4 p-4 " value="account">
-            <div className="px-4"><User /></div>
+
             <div className="flex flex-col text-sm flex-1 jus items-start">
               <h4>Carreers</h4>
             </div>
             <div><ArrowUpRight /></div>
           </TabsTrigger>
           <TabsTrigger className="flex flex-1 gap-4 p-4 " value="account">
-            <div className="px-4"><User /></div>
+
             <div className="flex flex-col text-sm flex-1 jus items-start">
               <h4>Developers </h4>
             </div>
             <div><ArrowUpRight /></div>
           </TabsTrigger>
           <TabsTrigger className="flex flex-1 gap-4 p-4 " value="account">
-            <div className="px-4"><User /></div>
+
             <div className="flex flex-col text-sm flex-1 jus items-start">
               <h4>Directory </h4>
             </div>
             <div><ArrowUpRight /></div>
           </TabsTrigger>
           <TabsTrigger className="flex flex-1 gap-4 p-4 " value="account">
-            <div className="px-4"><User /></div>
+
             <div className="flex flex-col text-sm flex-1 jus items-start">
               <h4>Help Center </h4>
             </div>
             <div><ArrowUpRight /></div>
           </TabsTrigger>
           <TabsTrigger className="flex flex-1 gap-4 p-4 " value="account">
-            <div className="px-4"><User /></div>
+
             <div className="flex flex-col text-sm flex-1 jus items-start">
               <h4>Marketing</h4>
             </div>
             <div><ArrowUpRight /></div>
           </TabsTrigger>
           <TabsTrigger className="flex flex-1 gap-4 p-4 " value="account">
-            <div className="px-4"><User /></div>
+
             <div className="flex flex-col text-sm flex-1 jus items-start">
               <h4>Status </h4>
             </div>
             <div><ArrowUpRight /></div>
           </TabsTrigger>
           <TabsTrigger className="flex flex-1 gap-4 p-4 " value="account">
-            <div className="px-4"><User /></div>
+
             <div className="flex flex-col text-sm flex-1 jus items-start">
               <h4>X for Bussiness</h4>
             </div>

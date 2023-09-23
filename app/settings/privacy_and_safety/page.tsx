@@ -13,14 +13,14 @@ const Privacy_and_Safety = () =>{
   return (
     <Tabs defaultValue="all" className="w-full flex flex-col ">
       <TabsList className="flex flex-col ">
-      <div className='flex flex-col flex-1 w-full px-2 py-4 gap-4'>
+      <div className='flex flex-col flex-1 w-full px-4 py-2 gap-4'>
           <h3 className=' text-3xl'>Privacy and Safety</h3>
             <p>
             Manage what information you see and share on X.
             </p>
         </div>
         <div className="tabs text-sm  flex flex-col w-full py-4 border-b  overflow-y-auto">
-          <h3>Your Tweeter Activity</h3>
+          <h3 className="px-4">Your Tweeter Activity</h3>
           <TabsTrigger className="flex flex-1 gap-4 p-4 " value="account">
             <div className="px-4"><User /></div>
             <div className="flex flex-col text-sm flex-1 jus items-start">
@@ -41,7 +41,7 @@ const Privacy_and_Safety = () =>{
             <div className="px-4"><Newspaper /></div>
             <div className="flex flex-col text-sm flex-1 items-start">
               <h4>Content you see </h4>
-              <p>Decide what you see on Tweeter based on your preferences like Topics and interests</p>
+              <p className="whitespace-pre-line text-left">Decide what you see on Tweeter based on your preferences like Topics and interests</p>
             </div>
             <div><ChevronRight /></div>
           </TabsTrigger>
@@ -49,7 +49,7 @@ const Privacy_and_Safety = () =>{
             <div className="px-4"><MegaphoneOff /></div>
             <div className="flex flex-col text-sm flex-1 items-start">
               <h4>Mute and block </h4>
-              <p>Manage the accounts, words, and notifications that you've muted or blocked</p>
+              <p className="whitespace-pre-line text-left">Manage the accounts, words, and notifications that you've muted or blocked</p>
             </div>
             <div><ChevronRight /></div>
           </TabsTrigger>
@@ -73,14 +73,14 @@ const Privacy_and_Safety = () =>{
             <div className="px-4"><Radar /></div>
             <div className="flex flex-col text-sm flex-1 items-start">
               <h4>Discoverability and contacts </h4>
-              <p>Control your discoverability settings and manage contacts you've imported.</p>
+              <p className="whitespace-pre-line text-left">Control your discoverability settings and manage contacts you've imported.</p>
             </div>
             <div><ChevronRight /></div>
           </TabsTrigger>
         </div>
 
         <div className="tabs text-sm  flex flex-col w-full py-4 border-b  overflow-y-auto">
-          <h3>Data sharing and personalization</h3>
+          <h3 className="px-4">Data sharing and personalization</h3>
           <TabsTrigger className="flex flex-1 gap-4 p-4 " value="account">
             <div className="px-4"><ArrowUpRightSquare /></div>
             <div className="flex flex-col text-sm flex-1 jus items-start">
@@ -93,7 +93,7 @@ const Privacy_and_Safety = () =>{
             <div className="px-4"><Activity /></div>
             <div className="flex flex-col text-sm flex-1 justify-start items-start">
               <h4>Infered identity </h4>
-              <p className=" ">Allow Tweeter to personalize your experience with your infered activity</p>
+              <p className="whitespace-pre-line text-left">Allow Tweeter to personalize your experience with your infered activity</p>
             </div>
             <div><ChevronRight /></div>
           </TabsTrigger>
@@ -109,13 +109,13 @@ const Privacy_and_Safety = () =>{
             <div className="px-4"><MapPin /></div>
             <div className="flex flex-col text-sm flex-1 items-start">
               <h4>Location information </h4>
-              <p>Manage the location information Tweeter uses to personalize your experience</p>
+              <p className="whitespace-pre-line text-left">Manage the location information Tweeter uses to personalize your experience</p>
             </div>
             <div><ChevronRight /></div>
           </TabsTrigger>
         </div>
-        <div className="flex flex-col gap-4 items-start justify-start w-full overflow-y-auto">
-          <h3>Learn more about privacy on Tweeter</h3>
+        <div className="flex flex-col gap-4 p-4 items-start justify-start w-full overflow-y-auto">
+          <h3 className="">Learn more about privacy on Tweeter</h3>
           <h4>Privacy center</h4>
           <h4>Privacy policy</h4>
           <h4>Contact us</h4>

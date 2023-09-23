@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/tabs"
 import { ArrowLeft, ChevronRight } from '../../node_modules/lucide-react';
 import AccountSettings from "./account/AccountSettings";
-import MonetizationSettings from "./monetization/MonetizationSettings";
+import MonetizationSettings from "./monetization/page";
 import Premium_Sign_Up from "../i/premium_sign_up/page";
 import Security_And_Account_Access from "./security_and_account_access/page";
 import Privacy_and_Safety from "./privacy_and_safety/page";
@@ -40,7 +40,7 @@ const TabsForSettings = () =>{
         <TabsTrigger className=" flex flex-1 p-4 " value="additional">Additional resources <div><ChevronRight /></div></TabsTrigger>
         </div>
       </TabsList>
-      <div className="col-span-10 bg-blue-00 pl-12 ml-96 top-0">
+      <div className="col-span-10 bg-blue-00 pl-8 ml-96 top-0">
       <TabsContent value="account">
         <AccountSettings />
       </TabsContent>
