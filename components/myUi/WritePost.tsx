@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 
 const WritePost = () => {
   return (
-    <div className='flex border-x border-b'>
+    <div className='md:flex border-x border-b hidden '>
     <div className='px-4 py-2'>
     <Avatar className='w-12 h-12'>
     <AvatarImage src="https://github.com/shadcn.png" />
