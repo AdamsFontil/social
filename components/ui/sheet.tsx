@@ -17,7 +17,7 @@ const SheetPortal = ({
 
   ...props
 }: SheetPrimitive.DialogPortalProps) => (
-  <SheetPrimitive.Portal {...props} />
+  <SheetPrimitive.Portal  {...props} />
 )
 SheetPortal.displayName = SheetPrimitive.Portal.displayName
 
