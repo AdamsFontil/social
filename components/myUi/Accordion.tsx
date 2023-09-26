@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { BarChart2, ArrowUpRightSquare, Settings, HelpCircle, PenSquare, PersonStanding } from "../../node_modules/lucide-react"
+import { BarChart2, ArrowUpRightSquare, Settings, HelpCircle, PenSquare, PersonStanding, PieChart, LogOut } from "../../node_modules/lucide-react"
 import Link from "next/link"
 export function AccordionDemo() {
   return (
@@ -27,8 +27,10 @@ export function AccordionDemo() {
           <div className="flex flex-col">
             <Link href={'/settings/account'}><div className="flex p-2 gap-2 items-center hover:bg-secondary pl-4"><Settings /> Settings and Privacy</div></Link>
             <Link href='https://help.twitter.com/en'><div className="flex p-2 gap-2 items-center hover:bg-secondary pl-4"><HelpCircle /> Help Center</div></Link>
+            <Link href='/i/display'><div className="flex p-2 gap-2 items-center hover:bg-secondary md:hidden pl-4"><PieChart /> Data Saver</div></Link>
             <Link href='/i/display'><div className="flex p-2 gap-2 items-center hover:bg-secondary pl-4"><PenSquare /> Display</div></Link>
-            <Link href='/i/keyboard_shortcuts'><div className="flex p-2 gap-2 items-center hover:bg-secondary pl-4"><PersonStanding /> Keyboard Shortcuts</div></Link>
+            <Link href='/i/display'><div className="flex p-2 gap-2 items-center hover:bg-secondary md:hidden pl-4"><LogOut /> Logout</div></Link>
+            <Link href='/i/keyboard_shortcuts'><div className="md:flex p-2 gap-2 items-center hidden hover:bg-secondary pl-4"><PersonStanding /> Keyboard Shortcuts</div></Link>
           </div>
         </AccordionContent>
       </AccordionItem>
