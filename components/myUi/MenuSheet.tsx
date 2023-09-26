@@ -25,7 +25,7 @@ export function MenuSheet() {
       </Avatar>
       </SheetTrigger>
       <SheetContent side={"left"}>
-        <div className="bg-red-500">
+        <div className="bg-re-500">
         <div className='py-5 justify-center items-center flex gap-2 '>
 
             <div>
