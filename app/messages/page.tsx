@@ -4,18 +4,21 @@ import Posts from '@/components/myUi/Posts';
 import Sidebar from '@/components/myUi/Sidebar';
 import Inbox from './Inbox';
 import Texts from './Texts'
+import BottomMenu from '@/components/myUi/BottomMenu';
 
 
 const Messages: React.FC = () => {
   return (
     <div className='grid grid-cols-10 gap-5'>
+      <div className='hidden md:grid md:col-span-2'>
       <Menu />
-      <div className='col-span-3 border px-4 py-2'>
-        <Inbox />
       </div>
-      <div className='col-span-5'>
+      <div className='md:col-span-3 col-span-10 px-4 py-2'>
+        <Inbox />
+        <BottomMenu type='message' />
+      </div>
+      <div className='md:col-span-5 hidden'>
         <Texts />
-
       </div>
     </div>
   );

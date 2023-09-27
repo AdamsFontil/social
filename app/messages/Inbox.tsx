@@ -16,7 +16,7 @@ const Inbox = () => {
       <main className="flex flex-col p-4 gap-4">
         <h2 className="text-3xl">Welcome to your inbox</h2>
         <p className="text-md text-gray-500">Drop a line, share posts and more with private conversations between you and others on X. </p>
-        <Button className="p-4 rounded-full bg-sky-500 flex-1 text-primary">Write a message</Button>
+        <Button className="p-6 rounded-full w-fit bg-sky-500 text-primary">Write a message</Button>
       </main>
   </div>
   )
