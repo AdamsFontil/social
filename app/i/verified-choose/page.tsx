@@ -19,7 +19,7 @@ const Verified_Choose = () => {
     <div>
       <Dialog>
         <DialogTrigger asChild>
-          <div className='flex gap-2 items-center hover:bg-secondary text-xl rounded-full pl-4 py-2'><Twitter /> Verified</div>
+          <div className='flex gap-2 items-center hover:bg-secondary text-sm md:text-xl rounded-full md:pl-4 py-2'><Twitter /> Premium</div>
         </DialogTrigger>
         <DialogContent className="text-primary">
           <DialogHeader className="flex fle-col pt-6 gap-4 items-center">

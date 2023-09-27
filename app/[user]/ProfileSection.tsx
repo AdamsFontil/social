@@ -2,14 +2,15 @@ import React from "react"
 import { ArrowLeft, CalendarDays } from "../../node_modules/lucide-react"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 const ProfileSection = () => {
   return (
     <div>
       <header className="flex  items-center p-4 gap-2">
-          <ArrowLeft />
+          <Link href={'/home'}><ArrowLeft className="hover:bg-secondary rounded-full hover:border p-2 h-12 w-12" /></Link>
           <div className="flex flex-col">
-            <h4>username</h4>
-            <p>number of posts</p>
+            <h4>Adams Fontil</h4>
+            <p>12 posts</p>
           </div>
       </header>
 

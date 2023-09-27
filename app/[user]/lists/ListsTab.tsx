@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input"
 import { ArrowLeft, MoreHorizontal, ListPlus, Plus, Dot } from "../../../node_modules/lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const lists = [
   {
@@ -34,8 +35,8 @@ const ListsTab = () => {
   return (
     <div className='text-2xl flex flex-col border-x h-full'>
       <section className="border-b">
-        <header className="flex justify-between items-center px-4 gap-5 py-2">
-          <div><ArrowLeft /></div>
+        <header className="flex justify-between items-center px-4 gap-4 py-2">
+          <Link href={'/home'}><div className="hover:bg-secondary p-2 rounded-full hover:border "><ArrowLeft /></div></Link>
           <Input type="text" className="" placeholder="Search" />
           <div><ListPlus /></div>
           <div><MoreHorizontal /></div>
