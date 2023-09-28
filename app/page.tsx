@@ -39,8 +39,21 @@ export default function Home() {
           <h3 className="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">
           Join today.
         </h3>
-          <Button className='rounded-3xl bg-accent-foreground'>Sign up with Google</Button>
-          <Button className='rounded-3xl bg-accent-foreground'>Sign up with Apple</Button>
+          <Button className='rounded-3xl bg-accent-foreground flex gap-2'><Image
+        src="/icons8-google.svg" // Make sure the path is correct
+        alt="Twitter Logo"
+        width={40}
+        height={40}
+        objectFit='cover'
+      />Sign up with Google</Button>
+          <Button className='rounded-3xl bg-accent-foreground flex gap-2'>
+          <Image
+        src="/icons8-apple.svg" // Make sure the path is correct
+        alt="Twitter Logo"
+        width={40}
+        height={40}
+        objectFit='cover'
+      />Sign up with Apple</Button>
           <div className='flex justify-between gap-2 items-center'>
           <p className='border-b w-full'></p>
           <p>or</p>
@@ -53,7 +66,7 @@ export default function Home() {
         </div>
         <div className='py-5 md:w-1/2 w-full gap-2 flex flex-col'>
         <p>Already have an account?</p>
-        <Button className='rounded-3xl bg-secondary text-primary'>Sign in</Button>
+        <Link href={'/home'}><Button className='rounded-3xl w-full bg-secondary text-primary'>Sign in</Button></Link>
       </div>
 
      </section>

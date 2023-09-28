@@ -11,7 +11,7 @@ import AddPostMobile from '@/components/myUi/AddPostMobile';
 const Home: React.FC = () => {
   return (
     <div className='grid grid-cols-10 gap-5'>
-      <div className='bg-red-500 hidden col-span-2 md:block'>
+      <div className=' hidden col-span-2 md:block'>
       <Menu />
       </div>
       <div className='md:col-span-5 col-span-10'>
@@ -21,7 +21,7 @@ const Home: React.FC = () => {
         {/* <AddPostMobile /> */}
         <BottomMenu />
       </div>
-      <div className='bg-blue-500 hidden col-span-3 md:block'>
+      <div className=' hidden col-span-3 md:block'>
       <Sidebar />
       </div>
     </div>
