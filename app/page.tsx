@@ -5,6 +5,7 @@ import { ModeToggle } from '@/components/ui/toggleTheme'
 import { TypographyDemo } from '@/components/test/typography'
 import { Test } from '@/components/test/Test'
 import Footer from '@/components/myUi/Footer'
+import SignUp from './i/flow/signup/page'
 
 
 export default function Home() {
@@ -60,7 +61,7 @@ export default function Home() {
           <p className='border-b w-full'></p>
           </div>
 
-          <Button className='rounded-3xl bg-sky-500 text-white'>Create an account</Button>
+          <SignUp />
           <footer>By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.</footer>
           </div>
         </div>

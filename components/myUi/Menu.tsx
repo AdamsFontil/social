@@ -13,13 +13,13 @@ const Menu: React.FC = () => {
   return (
     <div className='col-span-2 flex flex-col gap-2 h-screen items-start text-xl sticky top-0'>
         <div>
-          <Image
+          <Link href={'/home'}><Image
             src="/icons8-twitter.svg"
             alt="Twitter Logo"
             width={60}
             height={60}
             objectFit='cover'
-          />
+          /> </Link>
         </div>
         <div className='flex flex-col flex-1  '>
           <Link href='/home'><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><Home /> Home</div></Link>
