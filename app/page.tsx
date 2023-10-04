@@ -61,13 +61,15 @@ export default function Home() {
           <p className='border-b w-full'></p>
           </div>
 
-          <SignUp />
+          <Link href={'/i/flow/signup'}><Button className="rounded-3xl bg-sky-500 text-white w-full">
+          Create an account
+        </Button></Link>
           <footer>By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.</footer>
           </div>
         </div>
         <div className='py-5 md:w-1/2 w-full gap-2 flex flex-col'>
         <p>Already have an account?</p>
-        <Link href={'/home'}><Button className='rounded-3xl w-full bg-secondary text-primary'>Sign in</Button></Link>
+        <Link href={'/i/flow/login'}><Button className='rounded-3xl w-full bg-secondary text-primary'>Sign in</Button></Link>
       </div>
 
      </section>
