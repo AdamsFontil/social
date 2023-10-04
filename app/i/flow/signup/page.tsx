@@ -7,7 +7,7 @@ import { X } from "../../../../node_modules/lucide-react";
 import Home from "@/app/page";
 import Link from "next/link";
 
-export function SignUp() {
+const SignUp: React.FC = () => {
 
   return (
     <div>
