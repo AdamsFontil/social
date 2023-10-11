@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import Menu from '@/components/myUi/Menu';
 import Posts from '@/components/myUi/Posts';

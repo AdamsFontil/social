@@ -17,18 +17,18 @@ const Login: React.FC = () => {
 console.log('testing log IN')
 const [posts, setPosts] = useState([]);
 
-useEffect(() => {
-  // Call the getPosts function to fetch data
-  getPosts()
-    .then((data: any) => {
-      setPosts(data); // Set the posts data in the state
-    })
-    .catch((error: any) => {
-      console.error('Error fetching data:', error);
-    });
-}, []);
+// useEffect(() => {
+//   // Call the getPosts function to fetch data
+//   getPosts()
+//     .then((data: any) => {
+//       setPosts(data); // Set the posts data in the state
+//     })
+//     .catch((error: any) => {
+//       console.error('Error fetching data:', error);
+//     });
+// }, []);
 
-console.log('here are posts---', posts)
+// console.log('here are posts---', posts)
 const test = process.env.NEXT_PUBLIC_TEST
 console.log('testing-----',test)
 

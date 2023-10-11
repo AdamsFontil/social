@@ -1,8 +1,11 @@
+
 import './globals.css'
 import './hover-style.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
+import ReactQueryProvider  from './utils/reactQueryProvider'
+
 
 
 
@@ -21,11 +24,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+      <ReactQueryProvider>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             {children}
+            {/* <div className='p-12 bg-red-500'>Testing</div> */}
 
 
         </ThemeProvider>
+        </ReactQueryProvider>
       </body>
     </html>
   )
