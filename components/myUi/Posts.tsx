@@ -20,7 +20,7 @@ const Posts: React.FC = () => {
 
   return (
     <div className="customer-hover-style">
-      {posts.map((post: Post) => (
+      {posts?.map((post: Post) => (
         <div key={post.id} className="post flex gap-4 p-2 border-x border-b">
           <div className='avatar'>
             <Avatar className='w-12 h-12'>
