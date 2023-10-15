@@ -1,8 +1,8 @@
+'use client'
 import React from 'react';
 import Menu from '@/components/myUi/Menu';
 import Sidebar from '@/components/myUi/Sidebar';
 import { Input } from "@/components/ui/input"
-
 import ListsTab from './ListsTab';
 import WhoToFollow from '@/components/myUi/WhoToFollow';
 import TrendingCard from '@/components/myUi/TrendingCard';
