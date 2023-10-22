@@ -1,5 +1,3 @@
-import { createClient, PostgrestResponse } from '@supabase/supabase-js';
-
 export interface Post {
   id: number;
   user_id: string;
@@ -25,7 +23,3 @@ export interface Profile {
 
 // Define a type for the combined data
 export type CombinedData = Post & Profile;
-
-const supabaseUrl = 'https://uhvfikmkgbuykvfmnxzp.supabase.co';
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY!;
-const supabase = createClient(supabaseUrl, supabaseKey);

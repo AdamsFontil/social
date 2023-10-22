@@ -47,11 +47,11 @@ const Posts: React.FC = () => {
             <div className="actions flex justify-between text-sm pb-0 items-center text-gray-400">
               <span className="flex items-center hover:text-sky-500">
                 <div className='hover:bg-sky-500 rounded-full hover-bg-opacity-20 p-2'><MessageCircle className='' /> </div>
-                {post.likes}
+                {post.replies}
               </span>
               <span className="flex items-center hover:text-green-500">
                 <div className='hover:bg-green-500 rounded-full hover-bg-opacity-20 p-2'><Repeat2 className='' /> </div>
-                {post.likes}
+                {post.retweets}
               </span>
               <span className="flex items-center hover:text-pink-500">
                 <div className='hover:bg-pink-500 rounded-full hover-bg-opacity-20 p-2'><Heart className='' /> </div>
@@ -59,7 +59,7 @@ const Posts: React.FC = () => {
               </span>
               <div className="flex items-center hover:text-sky-500">
                 <div className='hover-bg-sky-500 hover-bg-opacity-20 rounded-full  p-2'><BarChart2/></div>
-                <p className=''>{post.retweets}</p>
+                <p className=''>{post.views}</p>
               </div>
               <span className="hover:text-sky-500 hover-bg-sky-500 rounded-full hover-bg-opacity-10 p-2"><Upload /></span>
             </div>
