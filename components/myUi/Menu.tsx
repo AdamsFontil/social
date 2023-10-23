@@ -7,9 +7,27 @@ import { ModeToggle } from '../ui/toggleTheme';
 import Link from 'next/link';
 import  MyPopover  from './MyPopover'
 import Verified_Choose from '@/app/i/verified-choose/page';
+import { fetchUserProfile } from '@/app/api/fetchProfile';
+import { useQuery } from 'react-query';
+import { UserProfile } from '@/app/utils/supabaseTypes';
 
 
 const Menu: React.FC = () => {
+  const user = JSON.parse(localStorage.getItem('user') || '{}')
+  const userId = user.id;
+
+  const { data: userProfile, isLoading, isError } = useQuery(['userProfile', userId], () => fetchUserProfile(userId));
+
+  console.log('current User is ---', user);
+  console.log(user.id);
+
+  if (isLoading) return <p>Loading profile...</p>;
+  if (isError) return <p>Error fetching profile</p>;
+
+  console.log('data from fetching profile---', userProfile);
+  console.log(typeof(userProfile))
+
+
   return (
     <div className='col-span-2 flex flex-col gap-2 h-screen items-start text-xl sticky top-0'>
         <div>
@@ -35,17 +53,17 @@ const Menu: React.FC = () => {
           <MyPopover />
           <Button className='p-6 px-24 mt-2 rounded-full w-full max-w-xl flex text-2xl bg-sky-500 text-primary'>Post</Button>
         </div>
-        <div className='py-5 justify-center items-center flex gap-2 '>
+        <div className='flex py-5 justify-center items-center gap-4 '>
 
           <div>
             <Avatar className='w-16 h-16'>
-              <AvatarImage src="https://github.com/shadcn.png" />
+              <AvatarImage src={userProfile?.profile_picture_url} />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
           </div>
           <div className='flex flex-col text-sm gap-0'>
-            <div>Account name</div>
-            <div>@handle</div>
+            <div>{userProfile?.display_name}</div>
+            <div>@{userProfile?.user_name}</div>
           </div>
           <div>
             <MoreHorizontal />

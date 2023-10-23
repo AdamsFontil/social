@@ -23,3 +23,19 @@ export interface Profile {
 
 // Define a type for the combined data
 export type CombinedData = Post & Profile;
+
+export interface UserProfile {
+  background_picture_url: string | null;
+  bio: string;
+  display_name: string;
+  followers: any[];
+  following: any[];
+  id: string;
+  likes: any[];
+  posts: any[];
+  profile_picture_url: string;
+  replies: any[];
+  user_id: string;
+  user_info: any;
+  user_name: string;
+}
