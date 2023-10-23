@@ -1,4 +1,5 @@
 'use client'
+import { useEffect } from 'react'
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import Link from 'next/link'
@@ -10,6 +11,17 @@ import SignUp from './i/flow/signup/page'
 
 
 export default function Home() {
+  useEffect(() => {
+    const user = localStorage.getItem('user');
+    if (user) {
+      console.log('user found----', user)
+      window.location.href = '/home';
+    }
+    else {
+      console.log('no user found-----')
+    }
+  }, []);
+
   return (
     <main className="flex flex-col items-center ">
       <div className='flex p-4'>
