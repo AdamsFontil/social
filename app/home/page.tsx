@@ -1,5 +1,7 @@
 'use client'
 import React from 'react';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import Menu from '@/components/myUi/Menu';
 import Posts from '@/components/myUi/Posts';
 import Sidebar from '@/components/myUi/Sidebar';
@@ -10,6 +12,18 @@ import AddPostMobile from '@/components/myUi/AddPostMobile';
 
 
 const Home: React.FC = () => {
+  useEffect(() => {
+    const user = localStorage.getItem('user');
+    if (user) {
+      console.log('user found----', user)
+      window.location.href = '/home';
+    }
+    else {
+      console.log('no user found-----')
+      window.location.href = '/';
+    }
+  }, []);
+
   return (
     <div className='grid grid-cols-10 gap-5'>
       <div className=' hidden col-span-2 md:block'>
