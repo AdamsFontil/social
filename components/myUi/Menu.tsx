@@ -10,6 +10,7 @@ import Verified_Choose from '@/app/i/verified-choose/page';
 import { fetchUserProfile } from '@/app/api/fetchProfile';
 import { useQuery } from 'react-query';
 import { UserProfile } from '@/app/utils/supabaseTypes';
+import AccountPopover from './AccountPopover';
 
 
 const Menu: React.FC = () => {
@@ -51,11 +52,11 @@ const Menu: React.FC = () => {
           <Link href={'/handler'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><User /> Profile</div></Link>
           <div className=''> < ModeToggle /></div>
           <MyPopover />
-          <Button className='p-6 px-24 mt-2 rounded-full w-full max-w-xl flex text-2xl bg-sky-500 text-primary'>Post</Button>
+          <Button className='p-6 px-24 py-8 mt-2 rounded-full flex text-2xl bg-sky-500 text-primary'>Post</Button>
         </div>
-        <div className='flex py-5 justify-center items-center gap-4 '>
+        <div className='flex items-center gap-2 py-2 px-4 hover:bg-gray-600  rounded-full'>
 
-          <div>
+          <div className=''>
             <Avatar className='w-16 h-16'>
               <AvatarImage src={userProfile?.profile_picture_url} />
               <AvatarFallback>CN</AvatarFallback>
@@ -65,8 +66,8 @@ const Menu: React.FC = () => {
             <div>{userProfile?.display_name}</div>
             <div>@{userProfile?.user_name}</div>
           </div>
-          <div>
-            <MoreHorizontal />
+          <div className=''>
+            <AccountPopover userProfile={userProfile} />
           </div>
       </div>
     </div>
