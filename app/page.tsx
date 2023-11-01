@@ -8,19 +8,11 @@ import { TypographyDemo } from '@/components/test/typography'
 import { Test } from '@/components/test/Test'
 import Footer from '@/components/myUi/Footer'
 import SignUp from './i/flow/signup/page'
+import useCheckUser2 from './utils/checkForUser2'
 
 
 export default function Home() {
-  useEffect(() => {
-    const user = localStorage.getItem('user');
-    if (user) {
-      console.log('user found----', user)
-      window.location.href = '/home';
-    }
-    else {
-      console.log('no user found-----')
-    }
-  }, []);
+ useCheckUser2()
 
   return (
     <main className="flex flex-col items-center ">

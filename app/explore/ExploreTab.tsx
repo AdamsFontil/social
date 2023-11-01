@@ -1,3 +1,4 @@
+'use client'
 import { TabsforExplore } from "./TabsForExplore"
 import { Input } from "@/components/ui/input"
 import { Settings, Search } from "../../node_modules/lucide-react"

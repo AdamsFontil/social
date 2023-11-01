@@ -1,3 +1,4 @@
+'use client'
 import Posts from "@/components/myUi/Posts"
 import TrendingContent from "@/components/myUi/TrendingContent"
 import { Button } from "@/components/ui/button"

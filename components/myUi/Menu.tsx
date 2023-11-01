@@ -1,3 +1,5 @@
+'use client'
+import { useState, useEffect } from 'react';
 import React from 'react';
 import { Button } from '../ui/button';
 import Image from 'next/image';
@@ -14,7 +16,15 @@ import AccountPopover from './AccountPopover';
 
 
 const Menu: React.FC = () => {
-  const user = JSON.parse(localStorage.getItem('user') || '{}')
+  const [user, setUser] = useState<any>({});
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const user = JSON.parse(localStorage.getItem('user') || '{}');
+      setUser(user);
+    }
+  }, []);
+
   const userId = user.id;
 
   const { data: userProfile, isLoading, isError } = useQuery(['userProfile', userId], () => fetchUserProfile(userId));

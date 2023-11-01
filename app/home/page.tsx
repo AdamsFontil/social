@@ -9,20 +9,11 @@ import HomeTab from '@/components/myUi/HomeTab';
 import WritePost from '@/components/myUi/WritePost';
 import BottomMenu from '@/components/myUi/BottomMenu';
 import AddPostMobile from '@/components/myUi/AddPostMobile';
+import useCheckUser from '../utils/checkForUser';
 
 
 const Home: React.FC = () => {
-  useEffect(() => {
-    const user = localStorage.getItem('user');
-    if (user) {
-      console.log('user found----', user)
-      window.location.href = '/home';
-    }
-    else {
-      console.log('no user found-----')
-      window.location.href = '/';
-    }
-  }, []);
+  useCheckUser()
 
   return (
     <div className='grid grid-cols-10 gap-5'>
