@@ -13,9 +13,8 @@ const handleLogout = async () => {
     console.error('Error signing out:', error.message);
   } else {
     console.log('no errors removing from localstorage')
-    // Remove the user from local storage or perform any other necessary clean-up
     localStorage.removeItem('user');
-    // Perform any other actions needed after logging out
+    window.location.href = '/';
   }
 };
 
