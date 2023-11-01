@@ -9,34 +9,17 @@ import { ModeToggle } from '../ui/toggleTheme';
 import Link from 'next/link';
 import  MyPopover  from './MyPopover'
 import Verified_Choose from '@/app/i/verified-choose/page';
-import { fetchUserProfile } from '@/app/api/fetchProfile';
-import { useQuery } from 'react-query';
-import { UserProfile } from '@/app/utils/supabaseTypes';
+import { UserProfile } from "@/app/utils/supabaseTypes";
 import AccountPopover from './AccountPopover';
 
 
-const Menu: React.FC = () => {
-  const [user, setUser] = useState<any>({});
+interface Props {
+  userProfile: UserProfile | null | undefined;
+}
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const user = JSON.parse(localStorage.getItem('user') || '{}');
-      setUser(user);
-    }
-  }, []);
 
-  const userId = user.id;
+const Menu: React.FC<Props> = ({ userProfile }) => {
 
-  const { data: userProfile, isLoading, isError } = useQuery(['userProfile', userId], () => fetchUserProfile(userId));
-
-  console.log('current User is ---', user);
-  console.log(user.id);
-
-  if (isLoading) return <p>Loading profile...</p>;
-  if (isError) return <p>Error fetching profile</p>;
-
-  console.log('data from fetching profile---', userProfile);
-  console.log(typeof(userProfile))
 
 
   return (

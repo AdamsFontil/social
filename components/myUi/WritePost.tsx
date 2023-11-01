@@ -6,13 +6,22 @@ import { Input } from "../ui/input";
 import { Image, Film, Vote, Smile, CalendarCheck, MapPin } from "../../node_modules/lucide-react";
 import { Button } from "../ui/button";
 import { createPost } from "@/app/api/createPost";
+import { UserProfile } from "@/app/utils/supabaseTypes";
 
 const getRandom = () => {
   return Math.floor(Math.random() * 10001); // Generates a random integer between 0 and 10000
 };
+interface Props {
+  userProfile: UserProfile | null | undefined;
+}
 
-const WritePost = () => {
+const WritePost: React.FC<Props> = ({ userProfile }) => {
   const [postContent, setPostContent] = useState("");
+  console.log('userProfile from WRITEPOST', userProfile)
+  console.log('userId', userProfile?.id)
+  console.log('posterName', userProfile?.display_name)
+  console.log('avatar', userProfile?.profile_picture_url)
+  console.log('user_name', userProfile?.user_name)
 
   const handlePost = async () => {
     try {
@@ -25,10 +34,10 @@ const WritePost = () => {
         replies: getRandom(),
         retweets: getRandom(),
         id: getRandom(),
-        user_id: '7ec971aa-348b-4510-a1d5-3a1ce830adad',
-        poster_name: 'Adams Fontil',
-        poster_avatar: 'https://avatars.githubusercontent.com/u/108461931?v=4',
-        poster_user_name: 'AdamsFontil'
+        user_id: userProfile?.id,
+        poster_name: userProfile?.display_name,
+        poster_avatar: userProfile?.profile_picture_url,
+        poster_user_name: userProfile?.user_name
 
       };
 

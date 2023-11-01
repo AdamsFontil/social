@@ -1,4 +1,3 @@
-'use client'
 import { supabase } from '../utils/supabase';
 import { UserProfile } from '../utils/supabaseTypes';
 
