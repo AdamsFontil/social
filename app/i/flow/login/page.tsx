@@ -22,6 +22,7 @@ const Login: React.FC = () => {
       onSuccess: (data) => {
         console.log('data----', data)
         localStorage.setItem('user', JSON.stringify(data));
+        window.location.href = '/home';
 
       }
     });
