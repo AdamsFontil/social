@@ -9,7 +9,7 @@ import { createPost } from "@/app/api/createPost";
 import { UserProfile } from "@/app/utils/supabaseTypes";
 
 const getRandom = () => {
-  return Math.floor(Math.random() * 10001); // Generates a random integer between 0 and 10000
+  return Math.floor(Math.random() * 10001);
 };
 interface Props {
   userProfile: UserProfile | null | undefined;
