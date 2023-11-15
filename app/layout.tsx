@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
 import ReactQueryProvider  from './utils/reactQueryProvider'
+import { UserProvider } from './utils/userProfileContext'
 
 
 
@@ -26,8 +27,10 @@ export default function RootLayout({
       <body className={inter.className}>
       <ReactQueryProvider>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <UserProvider>
             {children}
             {/* <div className='p-12 bg-red-500'>Testing</div> */}
+            </UserProvider>
 
 
         </ThemeProvider>
