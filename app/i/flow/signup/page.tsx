@@ -74,7 +74,7 @@ const SignUp: React.FC = () => {
       const newUser = {
         display_name: name,
         profile_picture_url: `https://picsum.photos/${randomNumberFrom200To2000}`,
-        background_picture_url: 'icons8-user-96.png',
+        background_picture_url: `https://picsum.photos/${randomNumberFrom200To2000}`,
         bio: '',
         followers: [],
         following: [],
