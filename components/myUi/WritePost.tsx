@@ -32,7 +32,6 @@ const WritePost: React.FC = () => {
         views: getRandom(),
         replies: getRandom(),
         retweets: getRandom(),
-        id: getRandom(),
         user_id: userProfile?.id,
         poster_name: userProfile?.display_name,
         poster_avatar: userProfile?.profile_picture_url,

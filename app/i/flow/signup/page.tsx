@@ -12,6 +12,7 @@ import { signUp } from "@/app/api/signup";
 import { createUserProfile } from "@/app/api/createProfile";
 import { UserProfile } from "@/app/utils/supabaseTypes";
 import ProfilePicturePlaceholder  from '../../../../public/icons8-user-96.png'
+import { randomUUID } from "crypto";
 
 
 const SignUp: React.FC = () => {
@@ -68,7 +69,7 @@ const SignUp: React.FC = () => {
       const user_name = generateUserName(name); // Generate the username variation
       const newUser = {
         display_name: name,
-        profile_picture_url: 'icons8-user-96.png',
+        profile_picture_url: `https://picsum.photos/${randomUUID}`,
         background_picture_url: 'icons8-user-96.png',
         bio: '',
         followers: [],
