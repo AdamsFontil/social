@@ -45,11 +45,11 @@ const Home: React.FC = () => {
   return (
     <div className='grid grid-cols-10 gap-5'>
       <div className=' hidden col-span-2 md:block'>
-      <Menu userProfile={userProfile} />
+      <Menu />
       </div>
       <div className='md:col-span-5 col-span-10'>
         <HomeTab />
-        <WritePost userProfile={userProfile} />
+        <WritePost />
         <Posts />
         {/* <AddPostMobile /> */}
         <BottomMenu />

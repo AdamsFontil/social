@@ -1,5 +1,4 @@
 'use client'
-import { useState, useEffect } from 'react';
 import React from 'react';
 import { Button } from '../ui/button';
 import Image from 'next/image';
@@ -9,16 +8,14 @@ import { ModeToggle } from '../ui/toggleTheme';
 import Link from 'next/link';
 import  MyPopover  from './MyPopover'
 import Verified_Choose from '@/app/i/verified-choose/page';
-import { UserProfile } from "@/app/utils/supabaseTypes";
 import AccountPopover from './AccountPopover';
+import { useUser } from '@/app/utils/userProfileContext';
 
 
-interface Props {
-  userProfile: UserProfile | null | undefined;
-}
 
 
-const Menu: React.FC<Props> = ({ userProfile }) => {
+const Menu: React.FC = () => {
+  const { userProfile } = useUser();
 
 
 

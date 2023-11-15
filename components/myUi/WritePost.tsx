@@ -6,16 +6,15 @@ import { Input } from "../ui/input";
 import { Image, Film, Vote, Smile, CalendarCheck, MapPin } from "../../node_modules/lucide-react";
 import { Button } from "../ui/button";
 import { createPost } from "@/app/api/createPost";
-import { UserProfile } from "@/app/utils/supabaseTypes";
+import { useUser } from "@/app/utils/userProfileContext";
 
 const getRandom = () => {
   return Math.floor(Math.random() * 10001);
 };
-interface Props {
-  userProfile: UserProfile | null | undefined;
-}
 
-const WritePost: React.FC<Props> = ({ userProfile }) => {
+
+const WritePost: React.FC = () => {
+  const { userProfile } = useUser();
   const [postContent, setPostContent] = useState("");
   console.log('userProfile from WRITEPOST', userProfile)
   console.log('userId', userProfile?.id)
