@@ -66,15 +66,17 @@ const SignUp: React.FC = () => {
         return `${formattedName}${randomSuffix}`; // Combine the formatted name and the random number
       };
 
-      const randomNumberFrom200To2000 = () => {
-        return Math.floor(Math.random() * (2001 - 200) + 200);
-      }
+      const randomWidth = Math.floor(Math.random() * (2001 - 200) + 200);
+      const randomHeight = Math.floor(Math.random() * (2001 - 200) + 200);
+
+      const imageUrl = `https://picsum.photos/${randomWidth}/${randomHeight}`;
+
 
       const user_name = generateUserName(name); // Generate the username variation
       const newUser = {
         display_name: name,
-        profile_picture_url: `https://picsum.photos/${randomNumberFrom200To2000}`,
-        background_picture_url: `https://picsum.photos/${randomNumberFrom200To2000}`,
+        profile_picture_url: imageUrl,
+        background_picture_url: imageUrl,
         bio: '',
         followers: [],
         following: [],
