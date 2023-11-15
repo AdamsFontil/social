@@ -13,10 +13,10 @@ export async function createUserProfile(newUser: UserProfile) {
 
     return data;
   } catch (error: any) {
-    // if (error.code === '23505') {
-    //   // Handle duplicate key violation (email already exists)
-    //   throw new Error('This email is already registered. Please log in or use a different email.');
-    // }
+    if (error.code === '23505') {
+      // Handle duplicate key violation (email already exists)
+      throw new Error('This email is already registered. Please log in or use a different email.');
+    }
     console.error('Error creating post:', error.message);
     throw error;
   }
