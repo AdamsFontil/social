@@ -52,9 +52,9 @@ const WritePost: React.FC = () => {
   return (
     <div className='md:flex border-x border-b hidden '>
       <div className='px-4 py-2'>
-        <Avatar className='w-12 h-12'>
-          <AvatarImage src="https://github.com/shadcn.png" />
-          <AvatarFallback>CN</AvatarFallback>
+        <Avatar className='w-14 h-14'>
+          <AvatarImage src={userProfile?.profile_picture_url} />
+          <AvatarFallback>{userProfile?.display_name}</AvatarFallback>
         </Avatar>
       </div>
 
