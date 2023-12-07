@@ -1,5 +1,5 @@
 import React from 'react';
-import { useQuery } from 'react-query';
+import { useQuery, useQueryClient } from 'react-query';
 import { formatDistanceToNow } from 'date-fns';
 import { enUS } from 'date-fns/locale';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
@@ -8,7 +8,15 @@ import { getPosts } from '../../app/api/posts';
 import { Post, CombinedData } from '../../app/utils/supabaseTypes';
 
 const Posts: React.FC = () => {
-  const { data: posts, isLoading, isError } = useQuery<Post[]>(['posts'], getPosts);
+  // const { data: posts, isLoading, isError } = useQuery<Post[]>(['posts'], getPosts);
+
+    const queryClient = useQueryClient();
+    const { data: posts, isLoading, isError } = useQuery<Post[]>(['posts'], getPosts, {
+      // Use onSuccess to update the query cache when the data is successfully fetched
+      onSuccess: (data) => {
+        queryClient.setQueryData(['posts'], data);
+      },
+    });
 
   if (isLoading) {
     return <div>Loading...</div>;

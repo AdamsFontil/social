@@ -42,7 +42,7 @@ const WritePost: React.FC = () => {
       await createPost(newPost); // Call the createPost function with the new post data
       console.log("Post created successfully:", newPost);
       setPostContent('')
-      // Add any additional logic needed after creating the post
+
     } catch (error) {
       console.error("Error creating post:", error);
       // Handle any errors that occur during the post creation process
