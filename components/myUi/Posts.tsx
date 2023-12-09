@@ -28,7 +28,7 @@ const Posts: React.FC = () => {
   }
 
   return (
-    <div className="customer-hover-style">
+    <div className="customer-hover-style text-s md:text-xl">
       {posts?.map((post: Post) => (
         <div key={post.id} className="post flex gap-4 p-2 border-x border-b">
           <Link href={`/${post.poster_user_name}`}><div className='avatar'>
@@ -37,12 +37,12 @@ const Posts: React.FC = () => {
               <AvatarFallback>{post.poster_user_name}</AvatarFallback>
             </Avatar>
           </div></Link>
-          <div className='content  w-full'>
-            <div className='flex gap-2 justify-between items-center text-md'>
-              <div className='flex gap-1 '>
+          <div className='content  w-screen'>
+            <div className='flex gap-2 justify-between items-center text-xs md:text-md'>
+              <div className='flex gap-1 items-center'>
                 <Link href={`/${post.poster_user_name}`}><p className='hover:underline'>{post.poster_name}</p></Link>
                 <p className='text-gray-500'>@{post.poster_user_name}</p>
-                <Dot />
+                <div className='flex items-center justify-center'><Dot /></div>
                 <p>{formatDistanceToNow(new Date(post.created_at), { addSuffix: true, locale: enUS })}</p>
               </div>
               <div className='hover:bg-sky-500 hover:bg-opacity-20 rounded-full p-2'>
