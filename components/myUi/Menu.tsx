@@ -39,7 +39,7 @@ const Menu: React.FC = () => {
           <Link href={'/handler/communities'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><Users /> Communities</div></Link>
           {/* <Link href={'/i/verified-choose'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><CheckCircle /> Verified</div></Link> */}
           <Verified_Choose />
-          <Link href={'/handler'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><User /> Profile</div></Link>
+          <Link href={`/${userProfile?.user_name}`}><div className='flex gap-2 items-center hover:bg-secondary rounded-full pl-4 py-2'><User /> Profile</div></Link>
           <div className=''> < ModeToggle /></div>
           <MyPopover />
           <Button className='p-6 px-24 py-8 mt-2 rounded-full flex text-2xl bg-sky-500 text-primary'>Post</Button>

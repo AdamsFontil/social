@@ -17,7 +17,7 @@ const Communties: React.FC = () => {
 
       <div className='md:col-span-5 col-span-10 flex flex-col border-x'>
         <ProfileSection />
-        <TabsforUser />
+        {/* <TabsforUser /> */}
       </div>
       <div className='md:flex hidden flex-col md:col-span-3 gap-2 p-2'>
         <Input type="text" placeholder="Search" className='rounded-full' />
