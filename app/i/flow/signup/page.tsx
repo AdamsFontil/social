@@ -106,7 +106,7 @@ const SignUp: React.FC = () => {
     <div>
       <Home />
       <div className="fixed inset-0 bg-opacity-80 flex items-center justify-center">
-        <div className="absolute top-10 border w-1/2 left-72 h-4/5 bg-black px-8 py-4 rounded-lg gap-4">
+      <div className="md:absolute md:top-10 border md:w-1/2 md:left-72 md:h-4/5 h-screen w-full bg-black px-8 py-4 rounded-lg gap-4">
           <header className="flex gap-4 items-center">
             <Link href={'/'}><div className="p-2 hover:bg-secondary rounded-full"> <X /></div></Link>
             <h2 className="text-2xl">Create an Account</h2>
