@@ -6,6 +6,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 import { MessageCircle, Repeat2, Heart, BarChart2, Upload, Dot, MoreHorizontal } from '../../node_modules/lucide-react';
 import { getPosts } from '../../app/api/posts';
 import { Post, CombinedData } from '../../app/utils/supabaseTypes';
+import Link from 'next/link';
 
 const Posts: React.FC = () => {
   // const { data: posts, isLoading, isError } = useQuery<Post[]>(['posts'], getPosts);
@@ -30,16 +31,16 @@ const Posts: React.FC = () => {
     <div className="customer-hover-style">
       {posts?.map((post: Post) => (
         <div key={post.id} className="post flex gap-4 p-2 border-x border-b">
-          <div className='avatar'>
-            <Avatar className='w-12 h-12'>
+          <Link href={`/${post.poster_user_name}`}><div className='avatar'>
+            <Avatar className='w-12 h-12 hover:opacity-80 transition-opacity duration-300 ease-in-out'>
               <AvatarImage src={post.poster_avatar} alt={post.poster_user_name}/>
               <AvatarFallback>{post.poster_user_name}</AvatarFallback>
             </Avatar>
-          </div>
+          </div></Link>
           <div className='content  w-full'>
             <div className='flex gap-2 justify-between items-center text-md'>
               <div className='flex gap-1 '>
-                <p>{post.poster_name}</p>
+                <Link href={`/${post.poster_user_name}`}><p className='hover:underline'>{post.poster_name}</p></Link>
                 <p className='text-gray-500'>@{post.poster_user_name}</p>
                 <Dot />
                 <p>{formatDistanceToNow(new Date(post.created_at), { addSuffix: true, locale: enUS })}</p>

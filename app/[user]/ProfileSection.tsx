@@ -35,7 +35,7 @@ const ProfileSection = () => {
       try {
         const userData = await getUserByUsername(username);
         setUser(userData);
-        setUser(null)  //to test !user
+        // setUser(null)  //to test !user
         console.log('user from pathname info----', user)
         console.log('to compare to userProfile---', userProfile)
       } catch (error) {
@@ -75,7 +75,7 @@ const ProfileSection = () => {
         <div className="flex gap-2 text-2xl text-white pl-24 pt-12">
           <h3>This Account doesn't exist</h3>
         </div>
-        <div className="flex gap-2 pl-24 pt-12 ">
+        <div className="flex gap-2 pl-24 ">
           <h5>Try searching for another</h5>
         </div>
       </section>
