@@ -15,13 +15,15 @@ import { Avatar, AvatarImage, AvatarFallback } from "../ui/avatar"
 import MyPopover from "./MyPopover"
 import { Banknote, Users, Bookmark, ScrollText, Twitter, User, Plus } from "../../node_modules/lucide-react"
 import { AccordionDemo } from "./Accordion"
+import { useUser } from "@/app/utils/userProfileContext"
 
 export function MenuSheet() {
+  const { userProfile } = useUser();
   return (
     <Sheet>
       <SheetTrigger asChild>
       <Avatar className=''>
-        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+        <AvatarImage src={userProfile?.profile_picture_url} alt={userProfile?.display_name} />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
       </SheetTrigger>
@@ -31,24 +33,24 @@ export function MenuSheet() {
 
             <div className="flex justify-between bg-rd-500">
               <Avatar className='w-16 h-16'>
-                <AvatarImage src="https://github.com/shadcn.png" />
-                <AvatarFallback>CN</AvatarFallback>
+                <AvatarImage src={userProfile?.profile_picture_url} alt={userProfile?.display_name} />
+                <AvatarFallback>{userProfile?.display_name}</AvatarFallback>
               </Avatar>
               <div className="">
                 <Plus className="flex justify-center items-center mt-3 border h-8 w-8 rounded-full p-1" />
               </div>
             </div>
             <div className='flex flex-col text-sm gap-0'>
-              <div>Account name</div>
-              <div>@handle</div>
+              <div>{userProfile?.display_name}</div>
+              <div>@{userProfile?.user_name}</div>
               <div className="flex gap-2">
-                <p>4 Following</p>
-                <p>2 Followers</p>
+                <p>Following info N/A</p>
+                <p>Followers info N/A</p>
               </div>
             </div>
           </div>
           <div className='flex flex-col flex-1 pb-5 border-b '>
-            <Link href='/profile'><div className='flex gap-2 items-center hover:bg-secondary rounded-full  py-2'><User /> Profile</div></Link>
+            <Link href={`/${userProfile?.user_name}`}><div className='flex gap-2 items-center hover:bg-secondary rounded-full  py-2'><User /> Profile</div></Link>
             {/* <Link href={'/i/verified-choose'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full  py-2'><Twitter /> Verified</div></Link> */}
             <Verified_Choose />
             <Link href={'/handler/lists'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full  py-2'><ScrollText /> Lists</div></Link>
