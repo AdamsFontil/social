@@ -64,7 +64,7 @@ const Login: React.FC = () => {
               </div>
             </div>
           </div>
-          <footer className="pl-14 bg-red-500 pt-6">
+          <footer className="pl-14 pt-6">
             <Button type="submit" onClick={handleSignIn}>
               {isLoading ? 'Signing in...' : 'Sign in'} {/* Show loading state */}
             </Button>
