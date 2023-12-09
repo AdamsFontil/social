@@ -27,7 +27,7 @@ export function MenuSheet() {
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
       </SheetTrigger>
-      <SheetContent side={"left"}>
+      <SheetContent side={"left"} className='overflow-scroll'>
         <div className="bg-re-500">
         <div className='py-5 flex flex-col justify-center gap-2 '>
 
@@ -58,6 +58,7 @@ export function MenuSheet() {
             <Link href={'/handler/communities'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full  py-2'><Users /> Communities</div></Link>
             <Link href={'/monetization'}><div className='flex gap-2 items-center hover:bg-secondary rounded-full  py-2'><Banknote /> Monetization</div></Link>
           </div>
+
           <div>
             <AccordionDemo />
           </div>
