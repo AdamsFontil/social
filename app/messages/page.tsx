@@ -14,11 +14,11 @@ const Messages: React.FC = () => {
       <div className='hidden md:grid md:col-span-2'>
       <Menu />
       </div>
-      <div className='md:col-span-3 col-span-10 px-4 py-2'>
+      <div className='md:col-span-3 col-span-4 px-4 py-2 border-l'>
         <Inbox />
         <BottomMenu type='message' />
       </div>
-      <div className='md:col-span-5 hidden'>
+      <div className='md:col-span-5 border-l'>
         <Texts />
       </div>
     </div>
