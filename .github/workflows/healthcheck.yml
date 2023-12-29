@@ -1,0 +1,18 @@
+name: Periodic Health Check
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  health_check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the deployed service URL
+        uses: jtalk/url-health-check-action@v3
+        with:
+          url: https://social-indol.vercel.app/AdamsFontil
+          follow-redirect: false
+          max-attempts: 3
+          retry-delay: 5s
+          retry-all: false
