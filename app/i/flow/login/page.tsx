@@ -72,8 +72,9 @@ const Login: React.FC = () => {
             {isSuccess && <p>Sign in successful!</p>} {/* Show success message */}
           </footer>
           <div className="pl-14">
-            <p>Don't have an account <Link href={'/i/flow/signup'}>Sign Up</Link></p>
+            <p>Don't have an account <Link href={'/i/flow/signup'}><Button>Sign Up</Button></Link></p>
           </div>
+
         </div>
       </div>
     </div>

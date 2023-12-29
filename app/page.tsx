@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client'
 import { useEffect } from 'react'
 import Image from 'next/image'
@@ -41,18 +42,18 @@ export default function Home() {
         <h1 className="scroll-m-20 w-full text-4xl font-extrabold tracking-tight lg:text-5xl">
           Happening now
         </h1>
-          <div className=' flex flex-col gap-4 md:w-1/2 w-full '>
+          <div className=' flex flex-col gap-4 w-full '>
           <h3 className="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">
           Join today.
         </h3>
-          <Button className='rounded-3xl bg-accent-foreground flex gap-2'><Image
+          <Button className='rounded-3xl bg-accent-foreground flex gap-2 cursor-not-allowed'><Image
         src="/icons8-google.svg" // Make sure the path is correct
         alt="Twitter Logo"
         width={40}
         height={40}
         objectFit='cover'
       />Sign up with Google</Button>
-          <Button className='rounded-3xl bg-accent-foreground flex gap-2'>
+          <Button className='rounded-3xl bg-accent-foreground flex gap-2 cursor-not-allowed'>
           <Image
         src="/icons8-apple.svg" // Make sure the path is correct
         alt="Twitter Logo"
@@ -69,10 +70,18 @@ export default function Home() {
           <Link href={'/i/flow/signup'}><Button className="rounded-3xl bg-sky-500 text-white w-full">
           Create an account
         </Button></Link>
-          <footer>By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.</footer>
+          <footer className='flex flex-col'>
+            <p>Don't want to create an account? </p>
+            <p>Sign In with our Demo Account</p>
+            <div className="bg--100 border-2 pt-2 mt-4 border-blue-300 p-4 rounded-md shadow-md">
+              <p className="text-lg font-semibold mb-2">Demo Credentials:</p>
+              <p>Email: demouser@gmail.com </p>
+              <p>Password: 12345678 </p>
+            </div>
+          </footer>
           </div>
         </div>
-        <div className='py-5 md:w-1/2 w-full gap-2 flex flex-col'>
+        <div className='py-5 w-full gap-2 flex flex-col'>
         <p>Already have an account?</p>
         <Link href={'/i/flow/login'}><Button className='rounded-3xl w-full bg-secondary text-primary'>Sign in</Button></Link>
       </div>
