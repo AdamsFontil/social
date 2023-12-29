@@ -7,13 +7,16 @@ import { Image, Film, Vote, Smile, CalendarCheck, MapPin } from "../../node_modu
 import { Button } from "../ui/button";
 import { createPost } from "@/app/api/createPost";
 import { useUser } from "@/app/utils/userProfileContext";
+import { useQueryClient } from 'react-query';
 
 const getRandom = () => {
   return Math.floor(Math.random() * 10001);
+
 };
 
 
 const WritePost: React.FC = () => {
+  const queryClient = useQueryClient()
   const { userProfile } = useUser();
   const [postContent, setPostContent] = useState("");
   console.log('userProfile from WRITEPOST', userProfile)
@@ -41,6 +44,8 @@ const WritePost: React.FC = () => {
       };
 
       await createPost(newPost); // Call the createPost function with the new post data
+      // Invalidate the query for posts to trigger a re-fetch
+      queryClient.invalidateQueries('posts');
       console.log("Post created successfully:", newPost);
       setPostContent('')
 

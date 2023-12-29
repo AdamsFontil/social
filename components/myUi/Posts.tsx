@@ -10,7 +10,18 @@ import Link from 'next/link';
 
 const formatShortDistanceToNow = (date: string) => {
   const distance = formatDistanceToNow(new Date(date), { addSuffix: true, locale: enUS }) as string;
-  const [, value, unit] = /(\d+)\s(\w+)/.exec(distance) || [];
+
+  if (!distance) {
+    return 'now'; // Handle cases where the distance is not available
+  }
+
+  const match = /(\d+)\s?(\w+)/.exec(distance);
+
+  if (!match) {
+    return 'now';
+  }
+
+  const [, value, unit] = match;
   const unitMap: Record<string, string> = {
     seconds: 's',
     minutes: 'm',
@@ -27,6 +38,7 @@ const formatShortDistanceToNow = (date: string) => {
   return `${value}${unitMap[unit] || unit}`;
 };
 
+
 const Posts: React.FC = () => {
   const queryClient = useQueryClient();
   const { data: posts, isLoading, isError } = useQuery<Post[]>(['posts'], getPosts, {
@@ -35,6 +47,7 @@ const Posts: React.FC = () => {
     },
   });
 
+  console.log('POSTS---',posts)
   if (isLoading) {
     return <div>Loading...</div>;
   }
