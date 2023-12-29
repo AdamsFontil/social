@@ -21,6 +21,7 @@ const WritePost: React.FC = () => {
   console.log('posterName', userProfile?.display_name)
   console.log('avatar', userProfile?.profile_picture_url)
   console.log('user_name', userProfile?.user_name)
+  console.log('POST CONTENT', postContent)
 
   const handlePost = async () => {
     try {
@@ -45,7 +46,7 @@ const WritePost: React.FC = () => {
 
     } catch (error) {
       console.error("Error creating post:", error);
-      // Handle any errors that occur during the post creation process
+
     }
   };
 

@@ -1,7 +1,9 @@
 import { createClient, PostgrestResponse } from '@supabase/supabase-js';
 
-const supabaseUrl = 'https://uhvfikmkgbuykvfmnxzp.supabase.co';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY!;
+// console.log('supabase key---', process.env.NEXT_PUBLIC_SUPABASE_KEY)
+// console.log('supabase URL---', process.env.NEXT_PUBLIC_SUPABASE_URL)
 export const supabase = createClient(supabaseUrl, supabaseKey);
 
 
