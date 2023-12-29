@@ -6,6 +6,7 @@ import { Avatar, AvatarImage, AvatarFallback } from '../ui/avatar';
 import { Button } from '../ui/button';
 import { useQuery } from 'react-query';
 import { fetchProfiles } from '@/app/api/fetchProfiles';
+import Link from 'next/link';
 
 const WhoToFollow: React.FC = () => {
   // Use the useQuery hook to fetch profiles
@@ -30,8 +31,8 @@ const WhoToFollow: React.FC = () => {
         <CardContent>
           <div className='flex flex-col gap-4'>
             {profiles?.map((profile) => (
-              <div className='flex items-center justify-between gap-5 hover:bg-secondary p-2 w-full' key={profile.id}>
-                <div className='flex gap-2'>
+             <div className='flex items-center justify-between gap-5 hover:bg-secondary p-2 w-full bg-re-600' key={profile.id}>
+                <Link href={`/${profile.user_name}`}><div className='flex gap-2'>
                   <Avatar className='w-12 h-12'>
                     <AvatarImage src={profile.profile_picture_url} />
                     <AvatarFallback>{profile.user_name}</AvatarFallback>
@@ -41,10 +42,12 @@ const WhoToFollow: React.FC = () => {
                     <p>@{profile.user_name}</p>
                   </div>
                 </div>
+                </Link>
                 <div className=''>
                   <Button className='flex items-end rounded-full'>Follow</Button>
                 </div>
               </div>
+
             ))}
           </div>
         </CardContent>
