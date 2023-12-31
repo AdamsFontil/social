@@ -66,21 +66,21 @@ const AddPostMobile: React.FC<AddPostMobileProps> = ({ type }) => {
       <DialogTrigger asChild className="p-4 w-16 h-16 flex justify-center items-center rounded-full bg-sky-500">
         {type === "message" ? <MailPlus /> : <Feather />}
       </DialogTrigger>
-      <DialogContent className="">
+      <DialogContent className="flex flex-col">
         {/* <DialogHeader>
           <DialogTitle>Edit profile</DialogTitle>
           <DialogDescription>
             Make changes to your profile here. Click save when you're done.
           </DialogDescription>
         </DialogHeader> */}
-        <div className='md:flex relative pb-72 '>
+        <div className=''>
           <div className='flex gap-4'>
             <Avatar className='w-14 h-14'>
               <AvatarImage src={userProfile?.profile_picture_url} />
               <AvatarFallback>{userProfile?.display_name}</AvatarFallback>
             </Avatar>
             <Textarea
-              className='ring-0 focus-visible:ring-0 focus-visible:border-0 h-64'
+              className='ring-0 focus-visible:ring-0 focus-visible:border-0 h-44'
               placeholder="What's happening?!"
               value={postContent}
               onChange={(e) => setPostContent(e.target.value)}>
