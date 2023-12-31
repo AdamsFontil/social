@@ -16,6 +16,7 @@ import { useQueryClient } from 'react-query';
 import { useState } from "react";
 import { createPost } from "@/app/api/createPost";
 import { DialogClose } from "@radix-ui/react-dialog";
+import { Textarea } from "../ui/textarea";
 
 interface AddPostMobileProps {
   type?: string;
@@ -78,14 +79,12 @@ const AddPostMobile: React.FC<AddPostMobileProps> = ({ type }) => {
               <AvatarImage src={userProfile?.profile_picture_url} />
               <AvatarFallback>{userProfile?.display_name}</AvatarFallback>
             </Avatar>
-            <Input
-              type="text"
-              normal={true}
-              className=' ring-0 ring-red-600 pb-72 border-0 focus-visible:ring-0 focus-visible:border-0 pt-4 w-full text-start'
+            <Textarea
+              className='ring-0 focus-visible:ring-0 focus-visible:border-0'
               placeholder="What's happening?!"
               value={postContent}
-              onChange={(e) => setPostContent(e.target.value)}
-            />
+              onChange={(e) => setPostContent(e.target.value)}>
+              </Textarea>
           </div>
 
           <div className=' pr-4 py-2 flex flex-col gap-2 pb-2 flex-1 '>
