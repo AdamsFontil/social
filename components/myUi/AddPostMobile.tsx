@@ -74,13 +74,13 @@ const AddPostMobile: React.FC<AddPostMobileProps> = ({ type }) => {
           </DialogDescription>
         </DialogHeader> */}
         <div className='md:flex relative pb-72 '>
-          <div className='flex gap-4 px-4 py-2'>
+          <div className='flex gap-4'>
             <Avatar className='w-14 h-14'>
               <AvatarImage src={userProfile?.profile_picture_url} />
               <AvatarFallback>{userProfile?.display_name}</AvatarFallback>
             </Avatar>
             <Textarea
-              className='ring-0 focus-visible:ring-0 focus-visible:border-0 h-44'
+              className='ring-0 focus-visible:ring-0 focus-visible:border-0 h-52'
               placeholder="What's happening?!"
               value={postContent}
               onChange={(e) => setPostContent(e.target.value)}>
