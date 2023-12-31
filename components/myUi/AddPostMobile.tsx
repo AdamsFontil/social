@@ -66,7 +66,7 @@ const AddPostMobile: React.FC<AddPostMobileProps> = ({ type }) => {
       <DialogTrigger asChild className="p-4 w-16 h-16 flex justify-center items-center rounded-full bg-sky-500">
         {type === "message" ? <MailPlus /> : <Feather />}
       </DialogTrigger>
-      <DialogContent className="px-8 pb-72">
+      <DialogContent className="px-8 ">
         {/* <DialogHeader>
           <DialogTitle>Edit profile</DialogTitle>
           <DialogDescription>
