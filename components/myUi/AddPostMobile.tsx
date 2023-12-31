@@ -80,7 +80,7 @@ const AddPostMobile: React.FC<AddPostMobileProps> = ({ type }) => {
               <AvatarFallback>{userProfile?.display_name}</AvatarFallback>
             </Avatar>
             <Textarea
-              className='ring-0 focus-visible:ring-0 focus-visible:border-0 h-52'
+              className='ring-0 focus-visible:ring-0 focus-visible:border-0 h-64'
               placeholder="What's happening?!"
               value={postContent}
               onChange={(e) => setPostContent(e.target.value)}>
