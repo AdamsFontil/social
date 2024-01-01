@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Feather, MailPlus } from "../../node_modules/lucide-react";
+import { Feather, MailPlus, X } from "../../node_modules/lucide-react";
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -66,7 +66,16 @@ const AddPostMobile: React.FC<AddPostMobileProps> = ({ type }) => {
       <DialogTrigger asChild className="p-4 w-16 h-16 flex justify-center items-center rounded-full sticky left-0 bg-sky-500">
         {type === "message" ? <MailPlus /> : <Feather />}
       </DialogTrigger>
-      <DialogContent className="flex flex-col ">
+      <DialogContent hideXButton={true} className="flex flex-col ">
+      <DialogClose className="justify-between flex">
+      <Button type="submit" className='bg-sy-500 px-6 text-primary rounded-full'>
+          < X ></X>
+        </Button>
+
+        <Button type="submit" className='bg-sky-500 px-6 text-white rounded-full' onClick={handlePost}>
+          Post
+        </Button>
+      </DialogClose>
         {/* <DialogHeader>
           <DialogTitle>Edit profile</DialogTitle>
           <DialogDescription>
@@ -80,7 +89,7 @@ const AddPostMobile: React.FC<AddPostMobileProps> = ({ type }) => {
               <AvatarFallback>{userProfile?.display_name}</AvatarFallback>
             </Avatar>
             <Textarea
-              className='ring-0 focus-visible:ring-0 focus-visible:border-0 '
+              className='border-red-500 ring-red-700 pb-52 '
               placeholder="What's happening?!"
               value={postContent}
               onChange={(e) => setPostContent(e.target.value)}>
@@ -107,11 +116,7 @@ const AddPostMobile: React.FC<AddPostMobileProps> = ({ type }) => {
                 <CalendarCheck size={24} />
                 <MapPin className='disabled' size={24} />
               </div>
-              <DialogClose>
-                <Button type="submit" className='bg-sky-500 px-6 text-white rounded-full' onClick={handlePost}>
-                  Post
-                </Button>
-              </DialogClose>
+
             </div>
 
           </div>
