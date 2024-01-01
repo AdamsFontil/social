@@ -59,16 +59,16 @@ const Posts: React.FC = () => {
   return (
     <div className="customer-hover-style text-s md:text-md">
       {posts?.map((post: Post) => (
-        <div key={post.id} className="post flex gap-4 p-2 border-x border-b">
+        <div key={post.id} className="post flex gap-4 border-x border-b bg-ornge-400">
           <Link href={`/${post.poster_user_name}`}>
-            <div className='avatar'>
+            <div className='avatar pt-1'>
               <Avatar className='w-12 h-12 hover:opacity-80 transition-opacity duration-300 ease-in-out'>
                 <AvatarImage src={post.poster_avatar} alt={post.poster_user_name}/>
                 <AvatarFallback>{post.poster_user_name}</AvatarFallback>
               </Avatar>
             </div>
           </Link>
-          <div className='content w-screen'>
+          <div className='flex flex-col bg-gren-500 w-full md:w-full '>
             <div className='flex gap-2 justify-between items-center text-xs md:text-md'>
               <div className='flex gap-1 items-center'>
                 <Link href={`/${post.poster_user_name}`}>
@@ -83,10 +83,10 @@ const Posts: React.FC = () => {
               </div>
             </div>
 
-            <div className='py-5'>
-              <p className="content">{post.content}</p>
+            <div className=' bg-pin-700 break-words '>
+              <p className="content text-yelow-600 break-words w-full xs:bg-blue-500 md:w-full">{post.content}</p>
             </div>
-            <div className="actions flex justify-between md:text-sm text-xs pb-0 items-center text-gray-400 tex">
+            <div className="actions flex justify-around md:text-sm text-xs pb-0 items-center text-gray-400 tex">
               <span className="flex items-center hover:text-sky-500">
                 <div className='hover:bg-sky-500 rounded-full hover-bg-opacity-20 p-2'><MessageCircle className='' /> </div>
                 {post.replies}

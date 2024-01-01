@@ -2,10 +2,10 @@
 import { Feather, MailPlus } from "../../node_modules/lucide-react";
 import { Button } from "@/components/ui/button"
 import {
-  Drawer,
-  DrawerContent,
-  DrawerTrigger, DrawerClose
-} from "@/components/ui/drawer"
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
@@ -15,7 +15,7 @@ import { useUser } from "@/app/utils/userProfileContext";
 import { useQueryClient } from 'react-query';
 import { useState } from "react";
 import { createPost } from "@/app/api/createPost";
-
+import { DialogClose } from "@radix-ui/react-dialog";
 import { Textarea } from "../ui/textarea";
 
 interface AddPostMobileProps {
@@ -62,18 +62,18 @@ const AddPostMobile: React.FC<AddPostMobileProps> = ({ type }) => {
   };
   return (
     <div className="">
-      <Drawer >
-      <DrawerTrigger asChild className="p-4 w-16 h-16 flex justify-center items-center rounded-full sticky left-0 bg-sky-500">
+      <Dialog >
+      <DialogTrigger asChild className="p-4 w-16 h-16 flex justify-center items-center rounded-full sticky left-0 bg-sky-500">
         {type === "message" ? <MailPlus /> : <Feather />}
-      </DrawerTrigger>
-      <DrawerContent className=" w-fit flex justify-center items-center flex-col bg-rd-500">
-        {/* <DrawerHeader>
-          <DrawerTitle>Edit profile</DrawerTitle>
-          <DrawerDescription>
+      </DialogTrigger>
+      <DialogContent className="flex flex-col ">
+        {/* <DialogHeader>
+          <DialogTitle>Edit profile</DialogTitle>
+          <DialogDescription>
             Make changes to your profile here. Click save when you're done.
-          </DrawerDescription>
-        </DrawerHeader> */}
-        <div className='md:flex relative top-0 '>
+          </DialogDescription>
+        </DialogHeader> */}
+        <div className='  '>
           <div className='flex gap-4 px-4 py-2'>
             <Avatar className='w-14 h-14'>
               <AvatarImage src={userProfile?.profile_picture_url} />
@@ -107,20 +107,20 @@ const AddPostMobile: React.FC<AddPostMobileProps> = ({ type }) => {
                 <CalendarCheck size={24} />
                 <MapPin className='disabled' size={24} />
               </div>
-              <DrawerClose>
+              <DialogClose>
                 <Button type="submit" className='bg-sky-500 px-6 text-white rounded-full' onClick={handlePost}>
                   Post
                 </Button>
-              </DrawerClose>
+              </DialogClose>
             </div>
 
           </div>
       </div>
-        {/* <DrawerFooter>
+        {/* <DialogFooter>
           <Button type="submit">Save changes</Button>
-        </DrawerFooter> */}
-      </DrawerContent>
-    </Drawer>
+        </DialogFooter> */}
+      </DialogContent>
+    </Dialog>
 
 
 

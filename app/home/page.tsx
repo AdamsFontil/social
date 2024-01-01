@@ -47,7 +47,7 @@ const Home: React.FC = () => {
       <div className=' hidden col-span-2 md:block'>
       <Menu />
       </div>
-      <div className='md:col-span-5 col-span-10 w-full'>
+      <div className='md:col-span-5 col-span-10 '>
         <HomeTab />
         <WritePost />
         <Posts />
