@@ -26,7 +26,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 
     // If the "normal" prop is not provided, render the modified input
     return (
-      <div className="relative flex w-full ">
+      <div className="relative flex w-full items-center">
         <div className="absolute left-2">
           <Search className="w-5 h-5 text-gray-400" />
         </div>

@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Feather, MailPlus, X } from "../../node_modules/lucide-react";
+import { Feather, MailPlus } from "../../node_modules/lucide-react";
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -61,17 +61,13 @@ const AddPostMobile: React.FC<AddPostMobileProps> = ({ type }) => {
     }
   };
   return (
-    <div className="">
+    <div className=" bg-yellow-500">
       <Dialog >
       <DialogTrigger asChild className="p-4 w-16 h-16 flex justify-center items-center rounded-full sticky left-0 bg-sky-500">
         {type === "message" ? <MailPlus /> : <Feather />}
       </DialogTrigger>
-      <DialogContent hideXButton={true} className="flex flex-col ">
-      <DialogClose className="justify-between flex">
-      <Button type="submit" className='bg-sy-500 px-6 text-primary rounded-full'>
-          < X ></X>
-        </Button>
-
+      <DialogContent className="flex flex-col ">
+        <DialogClose className="fixed right-5 top-5">
         <Button type="submit" className='bg-sky-500 px-6 text-white rounded-full' onClick={handlePost}>
           Post
         </Button>
@@ -89,7 +85,7 @@ const AddPostMobile: React.FC<AddPostMobileProps> = ({ type }) => {
               <AvatarFallback>{userProfile?.display_name}</AvatarFallback>
             </Avatar>
             <Textarea
-              className='border-red-500 ring-red-700 pb-52 '
+              className='ring-0 focus-visible:ring-0 focus-visible:border-0 border-0 pb-52 '
               placeholder="What's happening?!"
               value={postContent}
               onChange={(e) => setPostContent(e.target.value)}>
