@@ -61,7 +61,7 @@ const AddPostMobile: React.FC<AddPostMobileProps> = ({ type }) => {
     }
   };
   return (
-    <div className=" bg-yellow-500">
+    <div className=" ">
       <Dialog >
       <DialogTrigger asChild className="p-4 w-16 h-16 flex justify-center items-center rounded-full sticky left-0 bg-sky-500">
         {type === "message" ? <MailPlus /> : <Feather />}
@@ -85,7 +85,7 @@ const AddPostMobile: React.FC<AddPostMobileProps> = ({ type }) => {
               <AvatarFallback>{userProfile?.display_name}</AvatarFallback>
             </Avatar>
             <Textarea
-              className='ring-0 focus-visible:ring-0 focus-visible:border-0 border-0 pb-52 '
+              className=' apperance-none pb-52 '
               placeholder="What's happening?!"
               value={postContent}
               onChange={(e) => setPostContent(e.target.value)}>
