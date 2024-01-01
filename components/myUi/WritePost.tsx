@@ -8,6 +8,7 @@ import { Button } from "../ui/button";
 import { createPost } from "@/app/api/createPost";
 import { useUser } from "@/app/utils/userProfileContext";
 import { useQueryClient } from 'react-query';
+import { Textarea } from "../ui/textarea";
 
 const getRandom = () => {
   return Math.floor(Math.random() * 10001);
@@ -73,9 +74,7 @@ const WritePost: React.FC = () => {
           Choice3="Followers"
         />
 
-        <Input
-          type="text"
-          normal={true}
+        <Textarea
           className='border-0 hover:border-red-600'
           placeholder="What's happening?!"
           value={postContent}
