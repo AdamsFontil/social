@@ -9,16 +9,16 @@ import HomeTab from '@/components/myUi/HomeTab';
 import WritePost from '@/components/myUi/WritePost';
 import BottomMenu from '@/components/myUi/BottomMenu';
 import AddPostMobile from '@/components/myUi/AddPostMobile';
-import useCheckUser from '../utils/checkForUser';
+// import useCheckUser from '../utils/checkForUser';
 import { fetchUserProfile } from '@/app/api/fetchProfile';
 import { useQuery } from 'react-query';
 import { UserProfile } from '@/app/utils/supabaseTypes';
-import { useUser } from '../utils/userProfileContext';
+// import { useUser } from '../utils/userProfileContext';
 
 
 const Home: React.FC = () => {
 
-  const { userProfile } = useUser();
+  // const { userProfile } = useUser();
   // useCheckUser()
   // const [user, setUser] = useState<any>({});
 
@@ -47,7 +47,7 @@ const Home: React.FC = () => {
       <div className=' hidden col-span-2 md:block'>
       <Menu />
       </div>
-      <div className='md:col-span-5 col-span-10 '>
+      <div className='md:col-span-5 bg-red-600 col-span-10 '>
         <HomeTab />
         <WritePost />
         <Posts />

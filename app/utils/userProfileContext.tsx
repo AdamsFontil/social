@@ -1,6 +1,6 @@
 'use client'
 import React, { createContext, useContext, ReactNode, useState, useEffect } from 'react';
-import { UserProfile } from '@/app/utils/supabaseTypes';
+import { UserProfile } from '@/app/utils/Types';
 import { fetchUserProfile } from '@/app/api/fetchProfile';
 import useCheckUser from '../utils/checkForUser';
 

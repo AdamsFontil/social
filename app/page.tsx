@@ -20,7 +20,7 @@ export default function Home() {
       <div className='flex p-4'>
       <section className='hidden md:flex p-2 w-2/3'>
       <Image
-        src="/icons8-twitter.svg" // Make sure the path is correct
+        src="/app/images/icons8-square-250.png" // Make sure the path is correct
         alt="Twitter Logo"
         width={720}
         height={720}
@@ -40,7 +40,7 @@ export default function Home() {
       />
       </section>
         <h1 className="scroll-m-20 w-full text-4xl font-extrabold tracking-tight lg:text-5xl">
-          Happening now
+          Grow with Us
         </h1>
           <div className=' flex flex-col gap-4 w-full '>
           <h3 className="mt-8 scroll-m-20 text-2xl font-semibold tracking-tight">
